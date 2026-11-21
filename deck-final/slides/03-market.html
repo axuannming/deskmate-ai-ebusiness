@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1920">
+<title>DeskMate AI · Slide 3: Market &amp; Customer Strategy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    width: 1920px; height: 1080px; overflow: hidden;
+    background: #F8F6F1; color: #1F1E1C;
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .canvas {
+    width: 1920px; height: 1080px;
+    padding: 54px 104px 48px;
+    display: flex; flex-direction: column; justify-content: space-between;
+  }
+  .header {
+    padding-bottom: 22px; border-bottom: 1px solid #E3DED5;
+    display: flex; justify-content: space-between; align-items: flex-end;
+  }
+  .h-title {
+    font-family: 'Newsreader', serif; font-weight: 300;
+    font-size: 56px; line-height: 1.08; letter-spacing: -0.02em;
+  }
+  .h-right { font-size: 18px; font-weight: 400; color: #555049; text-align: right; }
+
+  .top-grid {
+    display: grid; grid-template-columns: 1fr 1.25fr; gap: 64px;
+    padding: 32px 0 34px; border-bottom: 1px solid #E3DED5;
+  }
+  .col-h {
+    font-family: 'Newsreader', serif; font-size: 34px; font-weight: 400;
+    color: #1F1E1C; margin-bottom: 14px;
+  }
+  .seg-list { display: flex; flex-direction: column; gap: 16px; }
+  .seg-row {
+    display: flex; justify-content: space-between; gap: 20px;
+    padding-bottom: 13px; border-bottom: 1px solid #E8E3D9;
+    font-size: 24px;
+  }
+  .seg-row:last-child { border-bottom: none; padding-bottom: 0; }
+  .seg-k { font-weight: 300; color: #555049; }
+  .seg-v { font-weight: 500; color: #1F1E1C; text-align: right; }
+
+  .diff-table { display: flex; flex-direction: column; }
+  .d-row {
+    display: grid; grid-template-columns: 230px 1fr; gap: 22px;
+    padding: 14px 0; border-bottom: 1px solid #E8E3D9; align-items: baseline;
+  }
+  .d-row:last-child { border-bottom: none; }
+  .d-name { font-size: 24px; font-weight: 500; color: #1F1E1C; }
+  .d-name.bronze { color: #7C5C34; }
+  .d-note { font-size: 24px; font-weight: 300; color: #4A4640; line-height: 1.38; }
+
+  /* Exact Schneider (2017) 5-Stage Customer Relationship Life Cycle */
+  .crlc-wrap { padding-top: 24px; }
+  .crlc-head {
+    display: flex; justify-content: space-between; align-items: baseline;
+    margin-bottom: 20px;
+  }
+  .crlc-title { font-family: 'Newsreader', serif; font-size: 32px; font-weight: 400; }
+  .crlc-ref { font-size: 18px; color: #555049; }
+
+  .crlc-grid {
+    display: grid; grid-template-columns: repeat(5, 1fr); gap: 24px;
+  }
+  .stage {
+    display: flex; flex-direction: column; gap: 8px;
+    padding-top: 18px; border-top: 2px solid #D9D2C5;
+  }
+  .stage.target {
+    border-top: 3px solid #7C5C34;
+    background: #FFFFFF;
+    padding: 18px 18px 16px;
+    border-left: 1px solid #E3DED5;
+    border-right: 1px solid #E3DED5;
+    border-bottom: 1px solid #E3DED5;
+  }
+  .st-top { display: flex; justify-content: space-between; align-items: baseline; }
+  .st-num { font-size: 17px; font-weight: 500; color: #5C564F; }
+  .stage.target .st-num { color: #7C5C34; }
+  .st-flag { font-size: 16px; font-weight: 500; color: #7C5C34; }
+  .st-name { font-family: 'Newsreader', serif; font-size: 30px; font-weight: 400; color: #1F1E1C; }
+  .st-body { font-size: 24px; font-weight: 300; line-height: 1.34; color: #4A4640; }
+</style>
+</head>
+<body>
+<div class="canvas">
+  <header class="header">
+    <h1 class="h-title">Built for Hong Kong salons, won through personal demos.</h1>
+    <small class="h-right">Market &amp; Customer Strategy<br>CRLC · Target: Awareness &amp; Exploration</small>
+  </header>
+
+  <section class="top-grid">
+    <div>
+      <h2 class="col-h">Target market focus</h2>
+      <div class="seg-list">
+        <div class="seg-row">
+          <span class="seg-k">Year 1 Core</span>
+          <span class="seg-v">HK Beauty &amp; Hair Salons (1–10 Staff)</span>
+        </div>
+        <div class="seg-row">
+          <span class="seg-k">Launch Districts</span>
+          <span class="seg-v">Mong Kok, Causeway Bay, TST</span>
+        </div>
+        <div class="seg-row">
+          <span class="seg-k">Year 2 Goal</span>
+          <span class="seg-v">10 Clinics / Tutorial Centres (Month 18)</span>
+        </div>
+        <div class="seg-row">
+          <span class="seg-k">Performance KPIs</span>
+          <span class="seg-v">25% trial-to-paid, &lt;5% monthly churn</span>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <h2 class="col-h">How DeskMate AI compares</h2>
+      <div class="diff-table">
+        <div class="d-row">
+          <span class="d-name">Meta Business Agent</span>
+          <span class="d-note">WhatsApp-centric, self-configured by the merchant.</span>
+        </div>
+        <div class="d-row">
+          <span class="d-name">SleekFlow / Wati</span>
+          <span class="d-note">General suites (SleekFlow Pro from US$109/mo annual; Wati automation).</span>
+        </div>
+        <div class="d-row">
+          <span class="d-name bronze">DeskMate AI</span>
+          <span class="d-note">Done-for-you HK salon setup, Cantonese &amp; English replies, and 3 channels synced to 1 shared calendar.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="crlc-wrap">
+    <div class="crlc-head">
+      <h2 class="crlc-title">Customer Relationship Life Cycle (5 Stages)</h2>
+      <small class="crlc-ref">Framework: Schneider (2017) · Launch focus: Awareness &amp; Exploration</small>
+    </div>
+    <div class="crlc-grid">
+      <div class="stage target">
+        <div class="st-top"><small class="st-num">Stage 1</small><small class="st-flag">Target</small></div>
+        <div class="st-name">Awareness</div>
+        <p class="st-body">IG/FB ads, SEO &amp; paid placement to inform owners.</p>
+      </div>
+      <div class="stage target">
+        <div class="st-top"><small class="st-num">Stage 2</small><small class="st-flag">Target</small></div>
+        <div class="st-name">Exploration</div>
+        <p class="st-body">Live Wix demo, 14-day trial &amp; 1-to-1 visit to explain &amp; switch.</p>
+      </div>
+      <div class="stage">
+        <div class="st-top"><small class="st-num">Stage 3</small></div>
+        <div class="st-name">Familiarity</div>
+        <p class="st-body">Opt-in monthly reports to convince owners to stay.</p>
+      </div>
+      <div class="stage">
+        <div class="st-top"><small class="st-num">Stage 4</small></div>
+        <div class="st-name">Commitment</div>
+        <p class="st-body">Menu refresh &amp; support to reinforce (&lt;5% churn).</p>
+      </div>
+      <div class="stage">
+        <div class="st-top"><small class="st-num">Stage 5</small></div>
+        <div class="st-name">Separation</div>
+        <p class="st-body">No ads targeted; exit check &amp; PDPO opt-out honoured.</p>
+      </div>
+    </div>
+  </section>
+</div>
+</body>
+</html>

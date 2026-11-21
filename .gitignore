@@ -1,0 +1,19 @@
+﻿# Python & Node build/runtime artifacts
+__pycache__/
+*.pyc
+node_modules/
+.env
+
+# Verification screenshots & temp outputs
+bp-verify/
+pptx-verify/
+pptx-verify-final/
+_tmp_shots/
+
+# IDE, Claude & OS metadata
+.vscode/
+.claude/
+.DS_Store
+Thumbs.db
+~$*
+*.log

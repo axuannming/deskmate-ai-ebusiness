@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>DeskMate AI — Combined 6-Slide Deck</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #EAE6DE; font-family: 'Inter', 'Noto Sans TC', sans-serif; color: #1F1E1C; }
+  .slide {
+    width: 1920px; height: 1080px; overflow: hidden;
+    background: #F8F6F1; color: #1F1E1C;
+    position: relative; margin: 0 auto 24px;
+    font-family: 'Inter', 'Noto Sans TC', sans-serif;
+  }
+  .s1 .canvas {
+    width: 1920px; height: 1080px;
+    padding: 54px 96px 46px;
+    display: flex; flex-direction: column; justify-content: space-between;
+  }
+.s1 .top {
+    display: flex; justify-content: space-between; align-items: baseline;
+    padding-bottom: 22px; border-bottom: 1px solid #E3DED5;
+  }
+.s1 .brand { font-size: 20px; font-weight: 500; letter-spacing: 0.12em; color: #1F1E1C; }
+.s1 .meta { font-size: 18px; font-weight: 300; color: #555049; }
+.s1 .hero-band {
+    display: grid; grid-template-columns: 1.38fr 1fr; align-items: end;
+    gap: 72px; padding: 30px 0 28px;
+  }
+.s1 .title {
+    font-family: 'Newsreader', serif; font-weight: 300;
+    font-size: 84px; line-height: 1.04; letter-spacing: -0.025em;
+    color: #1F1E1C;
+  }
+.s1 .subtitle {
+    font-size: 24px; font-weight: 300; line-height: 1.52;
+    color: #4A4640; padding-bottom: 8px;
+  }
+.s1 .cinema-frame {
+    width: 100%; height: 536px; overflow: hidden; background: #EAE5DC;
+  }
+.s1 .cinema-frame img {
+    width: 100%; height: 100%; object-fit: cover; object-position: center 46%; display: block;
+  }
+.s1 .colophon {
+    display: grid; grid-template-columns: 1fr 1.2fr 1.1fr 1fr;
+    padding-top: 22px; border-top: 1px solid #E3DED5; margin-top: 22px; align-items: baseline;
+  }
+.s1 .col-item { display: flex; flex-direction: column; gap: 4px; }
+.s1 .col-item:last-child { text-align: right; }
+.s1 .col-k { font-size: 16px; font-weight: 300; color: #5C564F; }
+.s1 .col-v { font-size: 24px; font-weight: 400; color: #1F1E1C; }
+.s1 .col-v.bronze { color: #7C5C34; font-weight: 500; }.s2 .canvas {
+    width: 1920px; height: 1080px;
+    padding: 58px 104px 52px;
+    display: flex; flex-direction: column; justify-content: space-between;
+  }
+.s2 .header {
+    padding-bottom: 24px; border-bottom: 1px solid #E3DED5;
+    display: flex; justify-content: space-between; align-items: flex-end;
+  }
+.s2 .h-title {
+    font-family: 'Newsreader', serif; font-weight: 300;
+    font-size: 56px; line-height: 1.08; letter-spacing: -0.02em;
+  }
+.s2 .h-right { font-size: 18px; font-weight: 400; color: #555049; text-align: right; }
+.s2 .split {
+    display: grid; grid-template-columns: 1.08fr 1fr; gap: 80px;
+    align-items: center; flex: 1; padding: 36px 0;
+    border-bottom: 1px solid #E3DED5;
+  }
+.s2 .left-story {
+    display: flex; flex-direction: column; gap: 36px;
+    padding-right: 48px; border-right: 1px solid #E3DED5;
+  }
+.s2 .story-block h2 {
+    font-family: 'Newsreader', serif; font-weight: 400;
+    font-size: 36px; line-height: 1.18; color: #1F1E1C; margin-bottom: 12px;
+  }
+.s2 .story-block p {
+    font-size: 24px; font-weight: 300; line-height: 1.5; color: #4A4640;
+  }
+.s2 .story-block strong { font-weight: 500; color: #1F1E1C; }
+.s2 .cost-panel {
+    display: flex; flex-direction: column; justify-content: center; gap: 38px;
+  }
+.s2 .big-drop {
+    display: flex; align-items: baseline; gap: 28px;
+  }
+.s2 .drop-num {
+    font-family: 'Newsreader', serif; font-weight: 300;
+    font-size: 152px; line-height: 0.9; letter-spacing: -0.04em; color: #7C5C34;
+  }
+.s2 .drop-text {
+    font-size: 26px; font-weight: 400; line-height: 1.38; color: #1F1E1C; max-width: 340px;
+  }
+.s2 .bars { display: flex; flex-direction: column; gap: 28px; padding-top: 28px; border-top: 1px solid #E3DED5; }
+.s2 .bar-item { display: flex; flex-direction: column; gap: 10px; }
+.s2 .bar-head { display: flex; justify-content: space-between; align-items: baseline; font-size: 24px; }
+.s2 .bar-head span { font-weight: 300; color: #4A4640; }
+.s2 .bar-head strong { font-weight: 500; color: #1F1E1C; }
+.s2 .bar-head strong.bronze { color: #7C5C34; }
+.s2 .track { width: 100%; height: 6px; background: #E6E1D7; }
+.s2 .fill-staff { width: 100%; height: 100%; background: #B8B0A3; }
+.s2 .fill-pro { width: 17.6%; height: 100%; background: #7C5C34; }
+.s2 .bench-note { font-size: 18px; font-weight: 300; color: #5C564F; }
+.s2 .tiers {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    padding-top: 28px; gap: 48px;
+  }
+.s2 .tier { display: flex; flex-direction: column; gap: 6px; padding-right: 28px; border-right: 1px solid #E3DED5; }
+.s2 .tier:last-child { border-right: none; }
+.s2 .t-top { display: flex; justify-content: space-between; align-items: baseline; }
+.s2 .t-name { font-family: 'Newsreader', serif; font-size: 30px; font-weight: 400; color: #1F1E1C; }
+.s2 .t-price { font-size: 26px; font-weight: 500; color: #1F1E1C; }
+.s2 .t-price.bronze { color: #7C5C34; }
+.s2 .t-desc { font-size: 24px; font-weight: 300; color: #4A4640; line-height: 1.38; }.s3 .canvas {
+    width: 1920px; height: 1080px;
+    padding: 58px 104px 52px;
+    display: flex; flex-direction: column; justify-content: space-between;
+  }
+.s3 .header {
+    padding-bottom: 24px; border-bottom: 1px solid #E3DED5;
+    display: flex; justify-content: space-between; align-items: flex-end;
+  }
+.s3 .h-title {
+    font-family: 'Newsreader', serif; font-weight: 300;
+    font-size: 56px; line-height: 1.08; letter-spacing: -0.02em;
+  }
+.s3 .h-right { font-size: 18px; font-weight: 400; color: #555049; text-align: right; }
+.s3 .top-grid {
+    display: grid; grid-template-columns: 1fr 1.25fr; gap: 68px;
+    padding: 36px 0 38px; border-bottom: 1px solid #E3DED5;
+  }
+.s3 .col-h {
+    font-family: 'Newsreader', serif; font-size: 34px; font-weight: 400;
+    color: #1F1E1C; margin-bottom: 16px;
+  }
+.s3 .seg-list { display: flex; flex-direction: column; gap: 18px; }
+.s3 .seg-row {
+    display: flex; justify-content: space-between; gap: 24px;
+    padding-bottom: 14px; border-bottom: 1px solid #E8E3D9;
+    font-size: 24px;
+  }
+.s3 .seg-row:last-child { border-bottom: none; padding-bottom: 0; }
+.s3 .seg-k { font-weight: 300; color: #555049; }
+.s3 .seg-v { font-weight: 500; color: #1F1E1C; text-align: right; }
+.s3 .diff-table { display: flex; flex-direction: column; }
+.s3 .d-row {
+    display: grid; grid-template-columns: 230px 1fr; gap: 24px;
+    padding: 15px 0; border-bottom: 1px solid #E8E3D9; align-items: baseline;
+  }
+.s3 .d-row:last-child { border-bottom: none; }
+.s3 .d-name { font-size: 24px; font-weight: 500; color: #1F1E1C; }
+.s3 .d-name.bronze { color: #7C5C34; }
+.s3 .d-note { font-size: 24px; font-weight: 300; color: #4A4640; line-height: 1.38; }
+.s3 .crlc-wrap { padding-top: 28px; }
+.s3 .crlc-head {
+    display: flex; justify-content: space-between; align-items: baseline;
+    margin-bottom: 24px;
+  }
+.s3 .crlc-title { font-family: 'Newsreader', serif; font-size: 32px; font-weight: 400; }
+.s3 .crlc-ref { font-size: 18px; color: #555049; }
+.s3 .crlc-line {
+    width: 100%; height: 2px; background: #85623A; margin-bottom: 24px;
+  }
+.s3 .crlc-grid {
+    display: grid; grid-template-columns: repeat(5, 1fr); gap: 32px;
+  }
+.s3 .stage { display: flex; flex-direction: column; gap: 8px; }
+.s3 .st-num { font-size: 18px; font-weight: 500; color: #7C5C34; }
+.s3 .st-name { font-family: 'Newsreader', serif; font-size: 30px; font-weight: 400; color: #1F1E1C; }
+.s3 .st-body { font-size: 24px; font-weight: 300; line-height: 1.38; color: #4A4640; }.s4 .canvas {
+    width: 1920px; height: 1080px;
+    padding: 58px 104px 52px;
+    display: flex; flex-direction: column; justify-content: space-between;
+  }
+.s4 .header {
+    padding-bottom: 24px; border-bottom: 1px solid #E3DED5;
+    display: flex; justify-content: space-between; align-items: flex-end;
+  }
+.s4 .h-title {
+    font-family: 'Newsreader', serif; font-weight: 300;
+    font-size: 56px; line-height: 1.08; letter-spacing: -0.02em;
+  }
+.s4 .h-right { font-size: 18px; font-weight: 400; color: #555049; text-align: right; }
+.s4 .flow-wrap {
+    display: grid; grid-template-columns: 1fr 48px 1.15fr 48px 1.05fr;
+    align-items: center; gap: 0; padding: 32px 0;
+    border-bottom: 1px solid #E3DED5; flex: 1;
+  }
+.s4 .flow-col {
+    background: #FFFFFF; border: 1px solid #E3DED5;
+    padding: 36px 36px; display: flex; flex-direction: column; justify-content: space-between;
+    min-height: 556px;
+  }
+.s4 .flow-col.core {
+    background: #F2EFE8; border-top: 3px solid #85623A;
+  }
+.s4 .f-k { font-size: 18px; font-weight: 500; color: #7C5C34; margin-bottom: 10px; }
+.s4 .f-h { font-family: 'Newsreader', serif; font-size: 34px; font-weight: 400; color: #1F1E1C; margin-bottom: 18px; }
+.s4 .f-list { list-style: none; border-top: 1px solid #E3DED5; }
+.s4 .f-list li {
+    padding: 16px 0; border-bottom: 1px solid #E3DED5;
+    font-size: 24px; font-weight: 300; color: #3A3631; line-height: 1.35;
+  }
+.s4 .f-list li:last-child { border-bottom: none; }
+.s4 .f-list strong { font-weight: 500; color: #1F1E1C; }
+.s4 .connector {
+    display: flex; align-items: center; justify-content: center;
+  }
+.s4 .conn-line { width: 100%; height: 1.5px; background: #B8AE9E; }
+.s4 .sample-box {
+    margin-top: 18px; padding-top: 16px; border-top: 1px solid #DED8CD;
+    font-size: 24px; font-weight: 300; color: #4A4640; line-height: 1.4;
+  }
+.s4 .sample-box strong { color: #7C5C34; font-weight: 500; }
+.s4 .pay-strip {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    padding-top: 28px; gap: 36px;
+  }
+.s4 .p-col { padding-right: 24px; border-right: 1px solid #E3DED5; }
+.s4 .p-col:last-child { border-right: none; padding-right: 0; }
+.s4 .p-label { font-size: 18px; font-weight: 500; color: #7C5C34; margin-bottom: 6px; }
+.s4 .p-title { font-family: 'Newsreader', serif; font-size: 28px; font-weight: 400; color: #1F1E1C; margin-bottom: 6px; }
+.s4 .p-desc { font-size: 24px; font-weight: 300; color: #4A4640; line-height: 1.35; }.s5 .canvas {
+    width: 1920px; height: 1080px;
+    padding: 50px 96px 44px;
+    display: flex; flex-direction: column; justify-content: space-between;
+  }
+.s5 .header {
+    padding-bottom: 20px; border-bottom: 1px solid #E3DED5;
+    display: flex; justify-content: space-between; align-items: baseline;
+  }
+.s5 .h-title {
+    font-family: 'Newsreader', serif; font-weight: 300;
+    font-size: 54px; line-height: 1.06; letter-spacing: -0.02em;
+  }
+.s5 .h-url {
+    font-size: 24px; font-weight: 400; color: #7C5C34; text-decoration: none;
+    border-bottom: 1px solid #C8B49B; padding-bottom: 2px;
+  }
+.s5 .main {
+    display: grid; grid-template-columns: 560px 334px 1fr; gap: 36px;
+    align-items: center; flex: 1; padding: 24px 0 20px;
+  }
+.s5 .desktop-stack {
+    display: flex; flex-direction: column; gap: 22px;
+  }
+.s5 .shot-card {
+    background: #FFFFFF; border: 1px solid #D9D2C5;
+    display: flex; flex-direction: column; overflow: hidden;
+  }
+.s5 .shot-bar {
+    height: 36px; padding: 0 16px; border-bottom: 1px solid #E8E3D9;
+    display: flex; justify-content: space-between; align-items: center;
+    background: #FAF8F4;
+  }
+.s5 .shot-label { font-size: 16px; font-weight: 500; color: #1F1E1C; }
+.s5 .shot-tag { font-size: 16px; color: #7C5C34; }
+.s5 .shot-landscape {
+    width: 558px; height: 348px; background: #F8F6F1; overflow: hidden;
+  }
+.s5 .shot-landscape img {
+    width: 100%; height: 100%; object-fit: contain; display: block;
+  }
+.s5 .shot-mobile {
+    width: 332px; height: 718px; background: #F8F6F1; overflow: hidden;
+  }
+.s5 .shot-mobile img {
+    width: 100%; height: 100%; object-fit: contain; display: block;
+  }
+.s5 .demo-col {
+    display: flex; flex-direction: column; justify-content: space-between;
+    height: 756px; padding-left: 16px;
+  }
+.s5 .demo-intro {
+    font-size: 24px; font-weight: 300; line-height: 1.44; color: #4A4640;
+  }
+.s5 .link-list {
+    display: flex; flex-direction: column;
+    border-top: 1px solid #D5CEC2;
+  }
+.s5 .demo-link {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 24px 0; border-bottom: 1px solid #E3DED5;
+    text-decoration: none; color: #1F1E1C;
+  }
+.s5 .dl-step { font-size: 17px; color: #7C5C34; font-weight: 500; margin-bottom: 4px; }
+.s5 .dl-title { font-family: 'Newsreader', serif; font-size: 30px; font-weight: 400; color: #1F1E1C; }
+.s5 .dl-desc { font-size: 24px; font-weight: 300; color: #4A4640; margin-top: 4px; }
+.s5 .dl-btn {
+    padding: 10px 22px; border: 1px solid #1F1E1C;
+    font-size: 18px; font-weight: 400; color: #1F1E1C; white-space: nowrap;
+    margin-left: 20px;
+  }
+.s5 .demo-link.primary .dl-btn { background: #1F1E1C; color: #F8F6F1; }
+.s5 .foot {
+    padding-top: 18px; border-top: 1px solid #E3DED5;
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 20px; font-weight: 300; color: #524D47;
+  }
+.s5 .foot strong { font-weight: 500; color: #1F1E1C; }.s6 .canvas {
+    width: 1920px; height: 1080px;
+    padding: 58px 104px 52px;
+    display: flex; flex-direction: column; justify-content: space-between;
+  }
+.s6 .header {
+    padding-bottom: 24px; border-bottom: 1px solid #E3DED5;
+    display: flex; justify-content: space-between; align-items: flex-end;
+  }
+.s6 .h-title {
+    font-family: 'Newsreader', serif; font-weight: 300;
+    font-size: 56px; line-height: 1.08; letter-spacing: -0.02em;
+  }
+.s6 .h-sub { font-size: 24px; font-weight: 300; color: #524D47; margin-top: 8px; }
+.s6 .h-right { font-size: 18px; font-weight: 400; color: #524D47; text-align: right; }
+.s6 .monuments {
+    display: grid; grid-template-columns: 1fr 1fr 1fr;
+    align-items: center; padding: 36px 0; border-bottom: 1px solid #E3DED5;
+  }
+.s6 .m-col {
+    display: flex; flex-direction: column; align-items: center; text-align: center;
+    padding: 16px 40px; position: relative;
+  }
+.s6 .m-col::after {
+    content: ''; position: absolute; right: 0; top: 15%; height: 70%;
+    width: 1px; background: #E3DED5;
+  }
+.s6 .m-col:last-child::after { display: none; }
+.s6 .m-num {
+    font-family: 'Newsreader', serif; font-weight: 300;
+    font-size: 138px; line-height: 0.96; letter-spacing: -0.04em; color: #1F1E1C;
+  }
+.s6 .m-unit { color: #7C5C34; font-weight: 300; }
+.s6 .m-title { font-size: 26px; font-weight: 500; color: #1F1E1C; margin-top: 18px; }
+.s6 .m-desc { font-size: 24px; font-weight: 300; line-height: 1.4; color: #4A4640; margin-top: 8px; max-width: 440px; }
+.s6 .tco-section {
+    padding-top: 28px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 44px;
+  }
+.s6 .tco-item { display: flex; flex-direction: column; gap: 10px; }
+.s6 .tco-top { display: flex; justify-content: space-between; align-items: baseline; }
+.s6 .tco-name { font-size: 24px; font-weight: 500; color: #1F1E1C; }
+.s6 .tco-pct { font-size: 24px; font-weight: 400; color: #7C5C34; }
+.s6 .tco-line-bg { width: 100%; height: 3px; background: #E3DED5; }
+.s6 .tco-line-fill { height: 100%; background: #85623A; }
+.s6 .tco-amt { font-size: 26px; font-weight: 400; color: #1F1E1C; }
+.s6 .tco-note { font-size: 24px; font-weight: 300; line-height: 1.35; color: #524D47; }
+.s6 .foot {
+    padding-top: 22px; border-top: 1px solid #E3DED5;
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 20px; font-weight: 300; color: #4E4943;
+  }
+.s6 .foot strong { font-weight: 500; color: #1F1E1C; }
+</style>
+</head>
+<body>
+<div class="slide s1">
+
+<div class="canvas">
+  <header class="top">
+    <div class="brand">DESKMATE AI</div>
+    <small class="meta">SEHS2265 E-Business — Individual Assignment Two</small>
+  </header>
+
+  <section class="hero-band">
+    <h1 class="title">Quiet reception while your hands stay with the client.</h1>
+    <p class="subtitle">24/7 Cantonese and English AI receptionist for independent Hong Kong beauty and hair salons — unifying WhatsApp, Instagram, and website bookings into one calm schedule.</p>
+  </section>
+
+  <figure class="cinema-frame">
+    <img src="../assets/hk-salon-daylight.jpg" alt="Sunlit Hong Kong boutique beauty salon reception and treatment room">
+  </figure>
+
+  <footer class="colophon">
+    <div class="col-item">
+      <small class="col-k">Subscription</small>
+      <span class="col-v bronze">HK$788 / month Pro</span>
+    </div>
+    <div class="col-item">
+      <small class="col-k">Cost Benchmark</small>
+      <span class="col-v">82% lower than part-time staff</span>
+    </div>
+    <div class="col-item">
+      <small class="col-k">Onboarding</small>
+      <span class="col-v">14-day free trial &amp; setup</span>
+    </div>
+    <div class="col-item">
+      <small class="col-k">Presented by</small>
+      <span class="col-v">Individual Portfolio Author</span>
+    </div>
+  </footer>
+</div>
+
+</div><div class="slide s2">
+
+<div class="canvas">
+  <header class="header">
+    <h1 class="h-title">Missed bookings, solved at 82% lower cost.</h1>
+    <small class="h-right">Problem &amp; Business Model<br>B2B Fee-for-Service</small>
+  </header>
+
+  <section class="split">
+    <div class="left-story">
+      <div class="story-block">
+        <h2>The Salon Owner's Dilemma</h2>
+        <p>Independent Hong Kong salons (1–10 staff) rarely employ a full-time receptionist. While therapists are with clients or after closing, WhatsApp and Instagram enquiries go unanswered and customers book elsewhere.</p>
+      </div>
+      <div class="story-block">
+        <h2>B2B Fee-for-Service Model</h2>
+        <p>Salons pay a <strong>predictable monthly subscription</strong> with zero per-booking commission — plus a <strong>14-day free trial</strong> and done-for-you menu onboarding so busy owners launch effortlessly.</p>
+      </div>
+    </div>
+
+    <div class="cost-panel">
+      <div class="big-drop">
+        <div class="drop-num">-82%</div>
+        <div class="drop-text">Lower monthly cost than part-time reception cover</div>
+      </div>
+
+      <div class="bars">
+        <div class="bar-item">
+          <div class="bar-head">
+            <span>Part-time receptionist (4h/day, 26 days)</span>
+            <strong>HK$4,482 / mo</strong>
+          </div>
+          <div class="track"><div class="fill-staff"></div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-head">
+            <span>DeskMate AI Pro Plan (1,000 chats)</span>
+            <strong class="bronze">HK$788 / mo</strong>
+          </div>
+          <div class="track"><div class="fill-pro"></div></div>
+        </div>
+        <small class="bench-note">Benchmark: HK statutory minimum wage HK$43.10/hr (Labour Department, 2026).</small>
+      </div>
+    </div>
+  </section>
+
+  <footer class="tiers">
+    <div class="tier">
+      <div class="t-top"><span class="t-name">Starter</span><span class="t-price">HK$388 / mo</span></div>
+      <p class="t-desc">1 WhatsApp line, 300 chats, FAQ &amp; booking capture.</p>
+    </div>
+    <div class="tier">
+      <div class="t-top"><span class="t-name">Pro (Core)</span><span class="t-price bronze">HK$788 / mo</span></div>
+      <p class="t-desc">WhatsApp + IG + Web, 1,000 chats, shared calendar.</p>
+    </div>
+    <div class="tier">
+      <div class="t-top"><span class="t-name">Premium</span><span class="t-price">HK$1,488 / mo</span></div>
+      <p class="t-desc">Deposits, no-show follow-up, multi-branch routing.</p>
+    </div>
+  </footer>
+</div>
+
+</div><div class="slide s3">
+
+<div class="canvas">
+  <header class="header">
+    <h1 class="h-title">Built for Hong Kong salons, won through personal demos.</h1>
+    <small class="h-right">Market &amp; Customer Strategy<br>CRLC Acquisition Funnel</small>
+  </header>
+
+  <section class="top-grid">
+    <div>
+      <h2 class="col-h">Target Market Focus</h2>
+      <div class="seg-list">
+        <div class="seg-row">
+          <span class="seg-k">Year 1 Core</span>
+          <span class="seg-v">HK Beauty &amp; Hair Salons (1–10 Staff)</span>
+        </div>
+        <div class="seg-row">
+          <span class="seg-k">Launch Districts</span>
+          <span class="seg-v">Mong Kok, Causeway Bay, TST</span>
+        </div>
+        <div class="seg-row">
+          <span class="seg-k">Year 2 Expansion</span>
+          <span class="seg-v">Dental Clinics &amp; Tutorial Centres</span>
+        </div>
+        <div class="seg-row">
+          <span class="seg-k">Conversion Targets</span>
+          <span class="seg-v">25% trial-to-paid, &lt;5% monthly churn</span>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <h2 class="col-h">Why Salons Choose DeskMate AI</h2>
+      <div class="diff-table">
+        <div class="d-row">
+          <span class="d-name">Meta Business Agent</span>
+          <span class="d-note">WhatsApp-centric, self-configured by the merchant.</span>
+        </div>
+        <div class="d-row">
+          <span class="d-name">SleekFlow / Wati</span>
+          <span class="d-note">General multi-industry CRM suites priced from US$49–109+.</span>
+        </div>
+        <div class="d-row">
+          <span class="d-name bronze">DeskMate AI</span>
+          <span class="d-note">Done-for-you HK salon setup, Cantonese &amp; English replies, and 3 channels synced to 1 shared calendar.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="crlc-wrap">
+    <div class="crlc-head">
+      <h2 class="crlc-title">Customer Relationship Life Cycle</h2>
+      <small class="crlc-ref">Framework: Schneider (2017)</small>
+    </div>
+    <div class="crlc-line"></div>
+    <div class="crlc-grid">
+      <div class="stage">
+        <small class="st-num">Stage 1</small>
+        <div class="st-name">Awareness</div>
+        <p class="st-body">Targeted IG/FB ads and local HK salon SEO.</p>
+      </div>
+      <div class="stage">
+        <small class="st-num">Stage 2</small>
+        <div class="st-name">Exploration</div>
+        <p class="st-body">Live Wix booking demo and 1-to-1 salon visit.</p>
+      </div>
+      <div class="stage">
+        <small class="st-num">Stage 3</small>
+        <div class="st-name">Familiarity</div>
+        <p class="st-body">14-day free trial with our team configuring menus.</p>
+      </div>
+      <div class="stage">
+        <small class="st-num">Stage 4</small>
+        <div class="st-name">Commitment</div>
+        <p class="st-body">Seamless conversion to monthly Pro subscription.</p>
+      </div>
+      <div class="stage">
+        <small class="st-num">Stage 5</small>
+        <div class="st-name">Retention</div>
+        <p class="st-body">Ongoing menu updates, reminders &amp; low churn.</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+</div><div class="slide s4">
+
+<div class="canvas">
+  <header class="header">
+    <h1 class="h-title">Three channels, one cloud engine, zero double-bookings.</h1>
+    <small class="h-right">Operations &amp; Technology<br>Cloud &amp; Payment Stack</small>
+  </header>
+
+  <section class="flow-wrap">
+    <div class="flow-col">
+      <div>
+        <small class="f-k" style="display:block;">Inbound Enquiries</small>
+        <h2 class="f-h">Omnichannel Intake</h2>
+        <ul class="f-list">
+          <li><strong>WhatsApp Business</strong> — primary HK booking channel</li>
+          <li><strong>Instagram DM</strong> — visual salon discovery traffic</li>
+          <li><strong>Salon Website Chat</strong> — direct search enquiries</li>
+        </ul>
+      </div>
+      <div class="sample-box">「聽日放工 6 點後有冇位整 Gel 甲？」</div>
+    </div>
+
+    <div class="connector"><div class="conn-line"></div></div>
+
+    <div class="flow-col core">
+      <div>
+        <small class="f-k" style="display:block;">AI &amp; Cloud Layer</small>
+        <h2 class="f-h">DeskMate AI Engine</h2>
+        <ul class="f-list">
+          <li><strong>Cantonese &amp; English NLP</strong> trained on salon menus</li>
+          <li><strong>Managed PaaS &amp; Serverless</strong> scales for evening peaks</li>
+          <li><strong>Nearby Asia Cloud</strong> low latency over mobile &amp; Wi-Fi</li>
+        </ul>
+      </div>
+      <div class="sample-box">Handles up to <strong>60,000 chats/mo</strong> across 60 Pro salons.</div>
+    </div>
+
+    <div class="connector"><div class="conn-line"></div></div>
+
+    <div class="flow-col">
+      <div>
+        <small class="f-k" style="display:block;">Salon Fulfilment</small>
+        <h2 class="f-h">One Shared Calendar</h2>
+        <ul class="f-list">
+          <li><strong>Real-Time Slot Lock</strong> prevents channel clashes</li>
+          <li><strong>24-Hour Reminders</strong> cut costly no-shows</li>
+          <li><strong>Owner Handoff</strong> escalates custom bridal requests</li>
+        </ul>
+      </div>
+      <div class="sample-box"><strong>Booked:</strong> Gel Manicure (HK$280, Thu 18:30)</div>
+    </div>
+  </section>
+
+  <footer class="pay-strip">
+    <div class="p-col">
+      <small class="p-label" style="display:block;">Recurring Billing</small>
+      <div class="p-title">Visa &amp; Mastercard</div>
+      <p class="p-desc">Automated monthly subscriptions after trial.</p>
+    </div>
+    <div class="p-col">
+      <small class="p-label" style="display:block;">Express Checkout</small>
+      <div class="p-title">Apple &amp; Google Pay</div>
+      <p class="p-desc">Fast mobile onboarding for salon owners.</p>
+    </div>
+    <div class="p-col">
+      <small class="p-label" style="display:block;">Annual Invoices</small>
+      <div class="p-title">Hong Kong FPS</div>
+      <p class="p-desc">Zero card fees on annual local bank transfers.</p>
+    </div>
+    <div class="p-col">
+      <small class="p-label" style="display:block;">Governance</small>
+      <div class="p-title">PDPO Compliance</div>
+      <p class="p-desc">Minimal booking data stored securely in cloud.</p>
+    </div>
+  </footer>
+</div>
+
+</div><div class="slide s5">
+
+<div class="canvas">
+  <header class="header">
+    <h1 class="h-title">Live Wix Prototype Walkthrough</h1>
+    <a class="h-url" href="https://deskmate-ai-demo.example.com">deskmate-ai-demo.example.com</a>
+  </header>
+
+  <main class="main">
+    <section class="desktop-stack">
+      <div class="shot-card">
+        <div class="shot-bar">
+          <small class="shot-label">Desktop Home (1440×900)</small>
+          <small class="shot-tag">Live Wix Site</small>
+        </div>
+        <div class="shot-landscape">
+          <img src="../assets/wix-home.png" alt="Live DeskMate AI desktop homepage on Wix">
+        </div>
+      </div>
+
+      <div class="shot-card">
+        <div class="shot-bar">
+          <small class="shot-label">Simulated Trial Checkout</small>
+          <small class="shot-tag">HK$0 Today</small>
+        </div>
+        <div class="shot-landscape">
+          <img src="../assets/wix-checkout.png" alt="Live DeskMate AI simulated 14-day trial checkout">
+        </div>
+      </div>
+    </section>
+
+    <section class="shot-card">
+      <div class="shot-bar">
+        <small class="shot-label">Mobile (375×812)</small>
+        <small class="shot-tag">Responsive</small>
+      </div>
+      <div class="shot-mobile">
+        <img src="../assets/wix-mobile.png" alt="Live DeskMate AI mobile responsive view">
+      </div>
+    </section>
+
+    <aside class="demo-col">
+      <p class="demo-intro">Click any step below to open the live Wix Headless prototype during the 1-minute demonstration.</p>
+
+      <div class="link-list">
+        <a class="demo-link primary" href="https://deskmate-ai-demo.example.com/">
+          <div>
+            <small class="dl-step" style="display:block;">Step 1</small>
+            <div class="dl-title">Open Wix Home</div>
+            <div class="dl-desc">Value pitch &amp; responsive navigation</div>
+          </div>
+          <small class="dl-btn">Open</small>
+        </a>
+
+        <a class="demo-link" href="https://deskmate-ai-demo.example.com/#demo">
+          <div>
+            <small class="dl-step" style="display:block;">Step 2</small>
+            <div class="dl-title">Booking Example</div>
+            <div class="dl-desc">Gel Manicure (18:30, HK$280) live chat</div>
+          </div>
+          <small class="dl-btn">Open</small>
+        </a>
+
+        <a class="demo-link" href="https://deskmate-ai-demo.example.com/#pricing">
+          <div>
+            <small class="dl-step" style="display:block;">Step 3</small>
+            <div class="dl-title">Plans &amp; Checkout</div>
+            <div class="dl-desc">3 tiers, 14-day trial &amp; HK$0 confirmation</div>
+          </div>
+          <small class="dl-btn">Open</small>
+        </a>
+
+        <a class="demo-link" href="https://deskmate-ai-demo.example.com/#contact">
+          <div>
+            <small class="dl-step" style="display:block;">Step 4</small>
+            <div class="dl-title">Book a Demo Form</div>
+            <div class="dl-desc">1-to-1 Hong Kong onboarding request</div>
+          </div>
+          <small class="dl-btn">Open</small>
+        </a>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="foot">
+    <span><strong>Verified Live:</strong> Desktop &amp; mobile tested on Wix hosting with safe simulated checkout (no real billing).</span>
+    <span>1-Minute Live Demo Cue</span>
+  </footer>
+</div>
+
+</div><div class="slide s6">
+
+<div class="canvas">
+  <header class="header">
+    <div>
+      <h1 class="h-title">Year 1 Funding &amp; Unit Economics</h1>
+      <p class="h-sub">Estimated using Schneider's (2017) Total Cost of Ownership framework across build and Year 1 operations.</p>
+    </div>
+    <small class="h-right">DeskMate AI<br>Financial Plan</small>
+  </header>
+
+  <section class="monuments">
+    <div class="m-col">
+      <div class="m-num">400<span class="m-unit">k</span></div>
+      <div class="m-title">HK$ Seed Request</div>
+      <p class="m-desc">Covers omnichannel build, salon demos, cloud, and upkeep.</p>
+    </div>
+
+    <div class="m-col">
+      <div class="m-num">60</div>
+      <div class="m-title">Paying Salons (Year 1)</div>
+      <p class="m-desc">At HK$788 Pro tier, revenue reaches HK$47,280 / mo.</p>
+    </div>
+
+    <div class="m-col">
+      <div class="m-num">2.6<span class="m-unit">×</span></div>
+      <div class="m-title">Operating Cost Coverage</div>
+      <p class="m-desc">Covers HK$18,333 average ongoing monthly cost.</p>
+    </div>
+  </section>
+
+  <section class="tco-section">
+    <div class="tco-item">
+      <div class="tco-top"><span class="tco-name">Development</span><span class="tco-pct">45%</span></div>
+      <div class="tco-line-bg"><div class="tco-line-fill" style="width:100%"></div></div>
+      <div class="tco-amt">HK$180,000</div>
+      <div class="tco-note">AI workflow, site &amp; sync</div>
+    </div>
+
+    <div class="tco-item">
+      <div class="tco-top"><span class="tco-name">Marketing</span><span class="tco-pct">30%</span></div>
+      <div class="tco-line-bg"><div class="tco-line-fill" style="width:66.7%"></div></div>
+      <div class="tco-amt">HK$120,000</div>
+      <div class="tco-note">IG/FB ads, SEO &amp; demos</div>
+    </div>
+
+    <div class="tco-item">
+      <div class="tco-top"><span class="tco-name">Infrastructure</span><span class="tco-pct">15%</span></div>
+      <div class="tco-line-bg"><div class="tco-line-fill" style="width:33.3%"></div></div>
+      <div class="tco-amt">HK$60,000</div>
+      <div class="tco-note">PaaS, AI &amp; WhatsApp API</div>
+    </div>
+
+    <div class="tco-item">
+      <div class="tco-top"><span class="tco-name">Maintenance</span><span class="tco-pct">10%</span></div>
+      <div class="tco-line-bg"><div class="tco-line-fill" style="width:22.2%"></div></div>
+      <div class="tco-amt">HK$40,000</div>
+      <div class="tco-note">Uptime &amp; redesign reserve</div>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <span><strong>TCO Benchmark Check:</strong> Ongoing budget (HK$220,000) equals <strong>122%</strong> of initial build — inside Schneider's 50%–200% range.</span>
+    <span>Thank You — Questions Welcome</span>
+  </footer>
+</div>
+
+</div>
+</body>
+</html>

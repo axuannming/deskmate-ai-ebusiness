@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1920">
+<title>DeskMate AI · Slide 1: Cover</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    width: 1920px; height: 1080px; overflow: hidden;
+    background: #F8F6F1; color: #1F1E1C;
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .canvas {
+    width: 1920px; height: 1080px;
+    padding: 54px 96px 46px;
+    display: flex; flex-direction: column; justify-content: space-between;
+  }
+  .top {
+    display: flex; justify-content: space-between; align-items: baseline;
+    padding-bottom: 22px; border-bottom: 1px solid #E3DED5;
+  }
+  .brand { font-size: 20px; font-weight: 500; letter-spacing: 0.12em; color: #1F1E1C; }
+  .meta { font-size: 18px; font-weight: 300; color: #555049; }
+
+  .hero-band {
+    display: grid; grid-template-columns: 1.38fr 1fr; align-items: end;
+    gap: 72px; padding: 30px 0 28px;
+  }
+  .title {
+    font-family: 'Newsreader', serif; font-weight: 300;
+    font-size: 86px; line-height: 1.04; letter-spacing: -0.025em;
+    color: #1F1E1C; max-width: 14ch; text-wrap: balance;
+  }
+  .subtitle {
+    font-size: 24px; font-weight: 300; line-height: 1.52;
+    color: #4A4640; padding-bottom: 8px;
+  }
+
+  .cinema-frame {
+    width: 100%; height: 536px; overflow: hidden; background: #EAE5DC;
+  }
+  .cinema-frame img {
+    width: 100%; height: 100%; object-fit: cover; object-position: center 46%; display: block;
+  }
+
+  .colophon {
+    display: grid; grid-template-columns: 1fr 1.2fr 1.1fr 1fr;
+    padding-top: 22px; border-top: 1px solid #E3DED5; margin-top: 22px; align-items: baseline;
+  }
+  .col-item { display: flex; flex-direction: column; gap: 4px; }
+  .col-item:last-child { text-align: right; }
+  .col-k { font-size: 16px; font-weight: 300; color: #5C564F; }
+  .col-v { font-size: 24px; font-weight: 400; color: #1F1E1C; }
+  .col-v.bronze { color: #7C5C34; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="canvas">
+  <header class="top">
+    <div class="brand">DESKMATE AI</div>
+    <small class="meta">SEHS2265 E-Business · Live prototype: deskmate-ai-demo.example.com</small>
+  </header>
+
+  <section class="hero-band">
+    <h1 class="title">Your hands stay with the client.</h1>
+    <p class="subtitle">A 24/7 Cantonese and English AI receptionist for independent Hong Kong beauty and hair salons. It books WhatsApp, Instagram and website enquiries into one shared calendar.</p>
+  </section>
+
+  <figure class="cinema-frame">
+    <img src="../assets/hk-salon-daylight.jpg" alt="Sunlit Hong Kong boutique beauty salon reception and treatment room">
+  </figure>
+
+  <footer class="colophon">
+    <div class="col-item">
+      <small class="col-k">Subscription</small>
+      <span class="col-v bronze">HK$788 / month Pro</span>
+    </div>
+    <div class="col-item">
+      <small class="col-k">Cost benchmark</small>
+      <span class="col-v">82% lower than part-time staff</span>
+    </div>
+    <div class="col-item">
+      <small class="col-k">Onboarding</small>
+      <span class="col-v">14-day free trial &amp; setup</span>
+    </div>
+    <div class="col-item">
+      <small class="col-k">Presented by</small>
+      <span class="col-v">Individual Portfolio Author</span>
+    </div>
+  </footer>
+</div>
+</body>
+</html>

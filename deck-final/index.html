@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DeskMate AI · 6-Slide Presentation Viewer (SEHS2265)</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #1A1917; color: #F8F6F1; font-family: Inter, -apple-system, sans-serif; height: 100vh; display: flex; flex-direction: column; overflow: hidden; }
+  .stage-wrap { flex: 1; display: flex; align-items: center; justify-content: center; padding: 20px; position: relative; }
+  .frame-box { width: 1920px; height: 1080px; transform-origin: center center; box-shadow: 0 24px 80px rgba(0,0,0,0.55); background: #F8F6F1; }
+  iframe { width: 1920px; height: 1080px; border: none; display: block; }
+  .hud { height: 54px; padding: 0 28px; background: #141311; border-top: 1px solid #2E2C28; display: flex; align-items: center; justify-content: space-between; font-size: 14px; color: #CFC9BE; }
+  .controls { display: flex; gap: 10px; align-items: center; }
+  button { padding: 7px 16px; background: #262420; color: #F8F6F1; border: 1px solid #3F3C36; cursor: pointer; font-size: 13px; }
+  button:hover { background: #36332D; }
+  .notes { max-width: 720px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: #A9A296; }
+</style>
+</head>
+<body>
+  <div class="stage-wrap" id="wrap">
+    <div class="frame-box" id="box">
+      <iframe id="slideFrame" src="slides/01-cover.html" title="DeskMate AI Presentation Slide"></iframe>
+    </div>
+  </div>
+  <div class="hud">
+    <div class="controls">
+      <button type="button" id="prevBtn">Prev</button>
+      <span id="counter">1 / 6</span>
+      <button type="button" id="nextBtn">Next</button>
+    </div>
+    <div class="notes" id="noteBar"></div>
+    <div>Use ← / → keys · Direction 2 (Build Studio Luxury)</div>
+  </div>
+<script>
+  const slides = [
+    { file: 'slides/01-cover.html', note: "0:00-0:10 | Good morning. DeskMate AI is a bilingual AI receptionist that answers WhatsApp, Instagram and website enquiries for small Hong Kong beauty salons." },
+    { file: 'slides/02-problem.html', note: "0:10-0:40 | Salons with one to ten staff rarely have a receptionist, so enquiries are missed during treatments and after closing. At minimum wage, four hours of reception a day costs about 4,482 Hong Kong dollars a month; our Pro plan costs 788, which is 82% less. This is B2B e-commerce on a Fee-for-Service model. Salons pay a predictable monthly fee with no per-booking commission, and the 14-day trial is time limited, so it is not a freemium tier." },
+    { file: 'slides/03-market.html', note: "0:40-1:05 | We target owner-run salons in Mong Kok, Causeway Bay and Tsim Sha Tsui. As a new brand, we focus on the awareness and exploration stages of the customer relationship life cycle: social and search ads inform owners, then the web demo, the trial and a one-to-one demo explain the product. Our targets are 25% trial-to-paid conversion and under 5% monthly churn." },
+    { file: 'slides/04-operations.html', note: "1:05-1:30 | All three channels feed one booking engine and one shared calendar. It runs on a three-tier design with managed cloud and serverless functions, so we pay per use and scale for evening peaks, while a CDN keeps pages fast on mobile. Salons pay by recurring card, Apple Pay or Google Pay, or FPS for annual invoices." },
+    { file: 'slides/05-prototype.html', note: "1:30-2:30 | Here is the live Wix prototype. The navigation is clear and the layout works on mobile. In the booking demo, I type a salon name, Lumière Nail Studio. A client asks in Cantonese for a gel manicure after six, DeskMate AI replies in that salon's name and books six-thirty, and the shared calendar marks the slot. On Pricing, each plan starts with a 14-day trial; I'll choose Pro, and the simulated checkout shows HK$0 due today. Finally, the Book a Demo form is our one-to-one touchpoint, with an unticked opt-in box and a PDPO notice." },
+    { file: 'slides/06-financials.html', note: "2:30-3:00 | We are asking for 400,000 Hong Kong dollars in angel or seed funding, estimated with total cost of ownership. Ongoing costs are 122% of the initial build, inside the textbook's 50 to 200% range. We cover monthly operating costs at 24 Pro salons and aim for 60 by month twelve, or 47,280 dollars a month if all choose Pro. Thank you." }
+  ];
+  let idx = 0;
+  const frame = document.getElementById('slideFrame');
+  const counter = document.getElementById('counter');
+  const noteBar = document.getElementById('noteBar');
+  const box = document.getElementById('box');
+  const wrap = document.getElementById('wrap');
+  function fit() {
+    const s = Math.min((wrap.clientWidth - 40) / 1920, (wrap.clientHeight - 40) / 1080);
+    box.style.transform = `scale(${s})`;
+  }
+  function show(i) {
+    idx = Math.max(0, Math.min(slides.length - 1, i));
+    frame.src = slides[idx].file;
+    counter.textContent = `${idx + 1} / ${slides.length}`;
+    noteBar.textContent = slides[idx].note;
+  }
+  document.getElementById('prevBtn').onclick = () => show(idx - 1);
+  document.getElementById('nextBtn').onclick = () => show(idx + 1);
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight' || e.key === ' ') show(idx + 1);
+    if (e.key === 'ArrowLeft') show(idx - 1);
+  });
+  window.addEventListener('resize', fit);
+  fit(); show(0);
+</script>
+</body>
+</html>

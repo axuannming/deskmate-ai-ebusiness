@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1920">
+<title>DeskMate AI · Slide 2: Problem &amp; Business Model</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    width: 1920px; height: 1080px; overflow: hidden;
+    background: #F8F6F1; color: #1F1E1C;
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .canvas {
+    width: 1920px; height: 1080px;
+    padding: 58px 104px 52px;
+    display: flex; flex-direction: column; justify-content: space-between;
+  }
+  .header {
+    padding-bottom: 24px; border-bottom: 1px solid #E3DED5;
+    display: flex; justify-content: space-between; align-items: flex-end; gap: 32px;
+  }
+  .h-title {
+    font-family: 'Newsreader', serif; font-weight: 300;
+    font-size: 48px; line-height: 1.08; letter-spacing: -0.02em; white-space: nowrap;
+  }
+  .h-right { font-size: 18px; font-weight: 400; color: #555049; text-align: right; white-space: nowrap; }
+
+  .split {
+    display: grid; grid-template-columns: 1.08fr 1fr; gap: 80px;
+    align-items: center; align-content: center; flex: 1; padding: 0;
+    border-bottom: 1px solid #E3DED5;
+  }
+
+  .left-story {
+    display: flex; flex-direction: column; gap: 44px;
+    padding-right: 48px; border-right: 1px solid #E3DED5;
+  }
+  .story-block h2 {
+    font-family: 'Newsreader', serif; font-weight: 400;
+    font-size: 36px; line-height: 1.18; color: #1F1E1C; margin-bottom: 12px;
+  }
+  .story-block p {
+    font-size: 24px; font-weight: 300; line-height: 1.5; color: #4A4640;
+  }
+  .story-block strong { font-weight: 500; color: #1F1E1C; }
+
+  /* Right: Monumental Cost Contrast Sculpture */
+  .cost-panel {
+    display: flex; flex-direction: column; justify-content: center; gap: 42px;
+  }
+  .big-drop {
+    display: flex; align-items: baseline; gap: 28px;
+  }
+  .drop-num {
+    font-family: 'Newsreader', serif; font-weight: 300;
+    font-size: 152px; line-height: 0.9; letter-spacing: -0.04em; color: #7C5C34;
+  }
+  .drop-text {
+    font-size: 26px; font-weight: 400; line-height: 1.38; color: #1F1E1C; max-width: 340px;
+  }
+
+  .bars { display: flex; flex-direction: column; gap: 28px; padding-top: 28px; border-top: 1px solid #E3DED5; }
+  .bar-item { display: flex; flex-direction: column; gap: 10px; }
+  .bar-head { display: flex; justify-content: space-between; align-items: baseline; font-size: 24px; }
+  .bar-head span { font-weight: 300; color: #4A4640; }
+  .bar-head strong { font-weight: 500; color: #1F1E1C; }
+  .bar-head strong.bronze { color: #7C5C34; }
+  .track { width: 100%; height: 6px; background: #E6E1D7; }
+  .fill-staff { width: 100%; height: 100%; background: #B8B0A3; }
+  .fill-pro { width: 17.6%; height: 100%; background: #7C5C34; }
+  .bench-note { font-size: 18px; font-weight: 300; color: #5C564F; }
+
+  /* Bottom: Clean 3-Tier Fee-for-Service Strip */
+  .tiers {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    padding-top: 32px; padding-bottom: 6px; gap: 48px;
+  }
+  .tier { display: flex; flex-direction: column; gap: 6px; padding-right: 28px; border-right: 1px solid #E3DED5; }
+  .tier:last-child { border-right: none; }
+  .t-top { display: flex; justify-content: space-between; align-items: baseline; }
+  .t-name { font-family: 'Newsreader', serif; font-size: 30px; font-weight: 400; color: #1F1E1C; }
+  .t-price { font-size: 26px; font-weight: 500; color: #1F1E1C; }
+  .t-price.bronze { color: #7C5C34; }
+  .t-desc { font-size: 24px; font-weight: 300; color: #4A4640; line-height: 1.38; }
+</style>
+</head>
+<body>
+<div class="canvas">
+  <header class="header">
+    <h1 class="h-title">Missed enquiries answered for 82% less than part-time reception.</h1>
+    <small class="h-right">Problem &amp; Business Model<br>B2B Fee-for-Service</small>
+  </header>
+
+  <section class="split">
+    <div class="left-story">
+      <div class="story-block">
+        <h2>The problem</h2>
+        <p>Independent Hong Kong salons (1 to 10 staff) rarely employ a full-time receptionist. While therapists are with clients or after closing, WhatsApp and Instagram enquiries go unanswered and customers book elsewhere.</p>
+      </div>
+      <div class="story-block">
+        <h2>B2B Fee-for-Service model</h2>
+        <p>Salons pay a predictable monthly subscription with no per-booking commission. A time-limited 14-day trial, distinct from a permanent freemium tier, comes with done-for-you menu onboarding.</p>
+      </div>
+    </div>
+
+    <div class="cost-panel">
+      <div class="big-drop">
+        <div class="drop-num">-82%</div>
+        <div class="drop-text">Lower monthly cost than part-time reception cover</div>
+      </div>
+
+      <div class="bars">
+        <div class="bar-item">
+          <div class="bar-head">
+            <span>Part-time receptionist (4h/day, 26 days)</span>
+            <strong>HK$4,482 / mo</strong>
+          </div>
+          <div class="track"><div class="fill-staff"></div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-head">
+            <span>DeskMate AI Pro Plan (1,000 chats)</span>
+            <strong class="bronze">HK$788 / mo</strong>
+          </div>
+          <div class="track"><div class="fill-pro"></div></div>
+        </div>
+        <small class="bench-note">Benchmark: HK statutory minimum wage HK$43.10/hr (Labour Department, 2026).</small>
+      </div>
+    </div>
+  </section>
+
+  <footer class="tiers">
+    <div class="tier">
+      <div class="t-top"><span class="t-name">Starter</span><span class="t-price">HK$388 / mo</span></div>
+      <p class="t-desc">1 WhatsApp line, 300 chats, FAQ &amp; booking capture.</p>
+    </div>
+    <div class="tier">
+      <div class="t-top"><span class="t-name">Pro (Core)</span><span class="t-price bronze">HK$788 / mo</span></div>
+      <p class="t-desc">WhatsApp + IG + Web, 1,000 chats, shared calendar.</p>
+    </div>
+    <div class="tier">
+      <div class="t-top"><span class="t-name">Premium</span><span class="t-price">HK$1,488 / mo</span></div>
+      <p class="t-desc">Deposits, no-show follow-up, multi-branch routing.</p>
+    </div>
+  </footer>
+</div>
+</body>
+</html>

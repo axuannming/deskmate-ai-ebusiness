@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1920">
+<title>DeskMate AI · Slide 5: Live Wix Prototype Demo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    width: 1920px; height: 1080px; overflow: hidden;
+    background: #F8F6F1; color: #1F1E1C;
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .canvas {
+    width: 1920px; height: 1080px;
+    padding: 50px 96px 44px;
+    display: flex; flex-direction: column; justify-content: space-between;
+  }
+  .header {
+    padding-bottom: 20px; border-bottom: 1px solid #E3DED5;
+    display: flex; justify-content: space-between; align-items: baseline;
+  }
+  .h-title {
+    font-family: 'Newsreader', serif; font-weight: 300;
+    font-size: 54px; line-height: 1.06; letter-spacing: -0.02em;
+  }
+  .h-url {
+    font-size: 24px; font-weight: 400; color: #7C5C34; text-decoration: none;
+    border-bottom: 1px solid #C8B49B; padding-bottom: 2px;
+  }
+
+  .main {
+    display: grid; grid-template-columns: 560px 334px 1fr; gap: 36px;
+    align-items: center; flex: 1; padding: 24px 0 20px;
+  }
+
+  /* Left column: Two exact 16:10 landscape desktop captures (ZERO cropping) */
+  .desktop-stack {
+    display: flex; flex-direction: column; gap: 22px;
+  }
+  .shot-card {
+    background: #FFFFFF; border: 1px solid #D9D2C5;
+    display: flex; flex-direction: column; overflow: hidden;
+  }
+  .shot-bar {
+    height: 36px; padding: 0 16px; border-bottom: 1px solid #E8E3D9;
+    display: flex; justify-content: space-between; align-items: center;
+    background: #FAF8F4;
+  }
+  .shot-label { font-size: 16px; font-weight: 500; color: #1F1E1C; }
+  .shot-tag { font-size: 16px; color: #7C5C34; }
+
+  .shot-landscape {
+    width: 558px; height: 348px; background: #F8F6F1; overflow: hidden;
+  }
+  .shot-landscape img {
+    width: 100%; height: 100%; object-fit: contain; display: block;
+  }
+
+  /* Center column: Exact 375x812 portrait mobile capture (ZERO cropping) */
+  .shot-mobile {
+    width: 332px; height: 718px; background: #F8F6F1; overflow: hidden;
+  }
+  .shot-mobile img {
+    width: 100%; height: 100%; object-fit: contain; display: block;
+  }
+
+  /* Right column: 4-Step Live Demo Click Path */
+  .demo-col {
+    display: flex; flex-direction: column; justify-content: space-between;
+    height: 756px; padding-left: 16px;
+  }
+  .demo-intro {
+    font-size: 24px; font-weight: 300; line-height: 1.44; color: #4A4640;
+  }
+  .link-list {
+    display: flex; flex-direction: column;
+    border-top: 1px solid #D5CEC2;
+  }
+  .demo-link {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 24px 0; border-bottom: 1px solid #E3DED5;
+    text-decoration: none; color: #1F1E1C;
+  }
+  .dl-step { font-size: 17px; color: #7C5C34; font-weight: 500; margin-bottom: 4px; }
+  .dl-title { font-family: 'Newsreader', serif; font-size: 30px; font-weight: 400; color: #1F1E1C; }
+  .dl-desc { font-size: 24px; font-weight: 300; color: #4A4640; margin-top: 4px; }
+  .dl-btn-group {
+    display: flex; gap: 10px; margin-left: 16px;
+  }
+  .dl-btn {
+    padding: 10px 20px; border: 1px solid #1F1E1C;
+    font-size: 18px; font-weight: 400; color: #1F1E1C; white-space: nowrap;
+    text-decoration: none;
+  }
+  .dl-btn.solid, .demo-link.primary .dl-btn { background: #1F1E1C; color: #F8F6F1; }
+
+  .foot {
+    padding-top: 18px; border-top: 1px solid #E3DED5;
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 20px; font-weight: 300; color: #524D47;
+  }
+  .foot strong { font-weight: 500; color: #1F1E1C; }
+</style>
+</head>
+<body>
+<div class="canvas">
+  <header class="header">
+    <h1 class="h-title">Live Wix Prototype Walkthrough</h1>
+    <a class="h-url" href="https://deskmate-ai-demo.example.com">deskmate-ai-demo.example.com</a>
+  </header>
+
+  <main class="main">
+    <section class="desktop-stack">
+      <div class="shot-card">
+        <div class="shot-bar">
+          <small class="shot-label">Desktop Home (1440×900)</small>
+          <small class="shot-tag">Live Wix Site</small>
+        </div>
+        <div class="shot-landscape">
+          <img src="../assets/wix-home.png" alt="Live DeskMate AI desktop homepage on Wix">
+        </div>
+      </div>
+
+      <div class="shot-card">
+        <div class="shot-bar">
+          <small class="shot-label">Simulated Trial Checkout</small>
+          <small class="shot-tag">HK$0 Today</small>
+        </div>
+        <div class="shot-landscape">
+          <img src="../assets/wix-checkout.png" alt="Live DeskMate AI simulated 14-day trial checkout">
+        </div>
+      </div>
+    </section>
+
+    <section class="shot-card">
+      <div class="shot-bar">
+        <small class="shot-label">Mobile (375×812)</small>
+        <small class="shot-tag">Responsive</small>
+      </div>
+      <div class="shot-mobile">
+        <img src="../assets/wix-mobile.png" alt="Live DeskMate AI mobile responsive view">
+      </div>
+    </section>
+
+    <aside class="demo-col">
+      <p class="demo-intro">Click any step below to open the live Wix Headless prototype during the 1-minute demonstration.</p>
+
+      <div class="link-list">
+        <a class="demo-link primary" href="https://deskmate-ai-demo.example.com/">
+          <div>
+            <small class="dl-step" style="display:block;">Step 1</small>
+            <div class="dl-title">Open Wix Home</div>
+            <div class="dl-desc">Value pitch &amp; responsive navigation</div>
+          </div>
+          <small class="dl-btn">Open</small>
+        </a>
+
+        <a class="demo-link" href="https://deskmate-ai-demo.example.com/#demo">
+          <div>
+            <small class="dl-step" style="display:block;">Step 2</small>
+            <div class="dl-title">Booking Example</div>
+            <div class="dl-desc">3 salon presets, 3 channels &amp; Cantonese/English auto-match</div>
+          </div>
+          <small class="dl-btn">Open</small>
+        </a>
+
+        <div class="demo-link">
+          <div>
+            <small class="dl-step" style="display:block;">Step 3</small>
+            <div class="dl-title">Plans &amp; Checkout</div>
+            <div class="dl-desc">3 tiers, 14-day trial &amp; HK$0 confirmation</div>
+          </div>
+          <div class="dl-btn-group">
+            <a class="dl-btn" href="https://deskmate-ai-demo.example.com/#pricing">Plans</a>
+            <a class="dl-btn solid" href="https://deskmate-ai-demo.example.com/#checkout">Checkout</a>
+          </div>
+        </div>
+
+        <a class="demo-link" href="https://deskmate-ai-demo.example.com/#contact">
+          <div>
+            <small class="dl-step" style="display:block;">Step 4</small>
+            <div class="dl-title">Book a Demo Form</div>
+            <div class="dl-desc">One-to-one touchpoint, opt-in &amp; PDPO notice</div>
+          </div>
+          <small class="dl-btn">Open</small>
+        </a>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="foot">
+    <span><strong>Wix Headless Prototype:</strong> Wix hosting + Wix Media CDN; chat, HK$0 checkout &amp; form are front-end simulations.</span>
+    <span>1-Minute Live Demo Cue</span>
+  </footer>
+</div>
+</body>
+</html>

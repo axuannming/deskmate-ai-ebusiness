@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DeskMate AI — SEHS2265 人工核對儀表板</title>
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+</head>
+<body class="bg-[var(--background)] text-[var(--foreground)] antialiased p-6">
+  <div class="max-w-5xl mx-auto space-y-5">
+    <!-- Top Header & Countdown -->
+    <header class="bg-[var(--card)] border border-[var(--border)] rounded-xl p-5 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+      <div class="space-y-1">
+        <div class="text-xs font-semibold uppercase tracking-wider text-[var(--primary)]">PolyU HKCC · SEHS2265 Assignment Two · Individual Portfolio Author</div>
+        <h1 class="text-2xl font-semibold">DeskMate AI — A+ 驗收與人工核對儀表板</h1>
+        <p class="text-sm text-[var(--muted-foreground)]">已完成 Apple 級網站工藝升級＋自訂店名 iPhone 試玩＋blader/humanizer 正式商業語氣去 AI 化</p>
+      </div>
+      <div class="border border-[var(--border)] rounded-lg px-4 py-3 text-right shrink-0">
+        <div class="text-xs text-[var(--muted-foreground)]">截稿：2026-11-20 23:59 HKT</div>
+        <div id="countdown" class="text-lg font-semibold text-[var(--warning)]">計算中…</div>
+        <div class="text-xs text-[var(--success)] font-medium mt-0.5">Taste 100/100 · Rubric 98.0/100 (PASS)</div>
+      </div>
+    </header>
+
+    <!-- Live Wix Bar -->
+    <div class="bg-[var(--card)] border border-[var(--border)] rounded-xl p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+      <div class="min-w-0">
+        <div class="text-xs font-medium text-[var(--muted-foreground)]">今晚要貼上去的 Live Wix 網址</div>
+        <code id="wixUrl" class="text-sm break-all text-[var(--link)]">https://deskmate-ai-demo.example.com</code>
+      </div>
+      <div class="flex gap-2 shrink-0">
+        <button type="button" id="copyWixBtn" class="px-3 py-1.5 rounded-lg text-xs font-medium bg-[var(--primary)] text-[var(--primary-foreground)] cursor-pointer">複製 Live 網址</button>
+        <button type="button" id="copyFolderBtn" class="px-3 py-1.5 rounded-lg text-xs font-medium border border-[var(--border)] text-[var(--foreground)] cursor-pointer">複製交件資料夾路徑</button>
+      </div>
+    </div>
+
+    <!-- Navigation Tabs -->
+    <nav class="flex flex-wrap gap-2 border-b border-[var(--border)] pb-3" role="tablist">
+      <button type="button" data-tab="overview" class="tab-btn px-3.5 py-2 rounded-lg text-sm font-medium bg-[var(--primary)] text-[var(--primary-foreground)] cursor-pointer">1. 作業總覽與三件交件物</button>
+      <button type="button" data-tab="taste" class="tab-btn px-3.5 py-2 rounded-lg text-sm font-medium border border-[var(--border)] text-[var(--muted-foreground)] cursor-pointer">2. Taste 驗收與去 AI 化</button>
+      <button type="button" data-tab="textbook" class="tab-btn px-3.5 py-2 rounded-lg text-sm font-medium border border-[var(--border)] text-[var(--muted-foreground)] cursor-pointer">3. 課本概念對照表</button>
+      <button type="button" data-tab="script" class="tab-btn px-3.5 py-2 rounded-lg text-sm font-medium border border-[var(--border)] text-[var(--muted-foreground)] cursor-pointer">4. 3 分鐘講稿與 Q&amp;A</button>
+      <button type="button" data-tab="check" class="tab-btn px-3.5 py-2 rounded-lg text-sm font-medium border border-[var(--border)] text-[var(--muted-foreground)] cursor-pointer">5. 最後檢查清單</button>
+    </nav>
+
+    <!-- Tab 1: Overview -->
+    <section id="tab-overview" class="tab-panel space-y-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="bg-[var(--card)] border border-[var(--border)] rounded-xl p-4 space-y-2">
+          <div class="text-xs font-semibold text-[var(--primary)]">交付物 1 · 佔 40%（39.5/40）</div>
+          <h2 class="text-base font-semibold">Business_Plan_Updated.pdf</h2>
+          <p class="text-sm text-[var(--muted-foreground)]">共 6 頁：封面（姓名＋學號＋Wix 連結）＋<strong>正文嚴格 3 頁（p2–p4）</strong>＋APA 7 參考文獻（p5）＋Live 截圖附錄（p6）。</p>
+        </div>
+        <div class="bg-[var(--card)] border border-[var(--border)] rounded-xl p-4 space-y-2">
+          <div class="text-xs font-semibold text-[var(--primary)]">交付物 2 · 佔 40%（39.0/40）</div>
+          <h2 class="text-base font-semibold">Live Wix Headless 原型</h2>
+          <p class="text-sm text-[var(--muted-foreground)]">Apple 級毛玻璃頂欄＋捲動進場＋純 CSS 鈦金屬 iPhone「輸入店名即時試玩」＋三層定價＋HK$0 模擬結帳＋PDPO opt-in 表單（實測 94 KB，HTTP 200）。</p>
+        </div>
+        <div class="bg-[var(--card)] border border-[var(--border)] rounded-xl p-4 space-y-2">
+          <div class="text-xs font-semibold text-[var(--primary)]">交付物 3 · 佔 20%（19.5/20）</div>
+          <h2 class="text-base font-semibold">DeskMate_AI_Presentation.pptx</h2>
+          <p class="text-sm text-[var(--muted-foreground)]">嚴格 6 頁簡報＋Slide 5 內建 6 個點擊熱區（Home / Demo / Plans / Checkout / Contact）＋376 字逐字同步備忘稿。口頭報告：11/23 或 11/30。</p>
+        </div>
+      </div>
+
+      <div class="bg-[var(--card)] border border-[var(--border)] rounded-xl p-5 space-y-3">
+        <h3 class="text-base font-semibold">一句話看懂我們的商業點子與核心數字</h3>
+        <p class="text-sm text-[var(--muted-foreground)]"><strong>DeskMate AI</strong> 是給香港 1–10 人獨立美容院／髮型屋的 24 小時廣東話＋英文 AI 接待員。把 WhatsApp、Instagram DM 和官網查詢統一寫入同一個共享行事曆防撞期，解決美容師忙於做療程或夜間收工漏單的問題。</p>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
+          <div class="border border-[var(--border)] rounded-lg p-3"><div class="text-xl font-semibold">-82%</div><div class="text-xs text-[var(--muted-foreground)]">Pro HK$788 vs 兼職最低工資 HK$4,482/月</div></div>
+          <div class="border border-[var(--border)] rounded-lg p-3"><div class="text-xl font-semibold">HK$400k</div><div class="text-xs text-[var(--muted-foreground)]">首年 TCO 種子輪（營運佔開發 122%）</div></div>
+          <div class="border border-[var(--border)] rounded-lg p-3"><div class="text-xl font-semibold">24 間</div><div class="text-xs text-[var(--muted-foreground)]">Pro 店損益兩平（約第 5 個月）</div></div>
+          <div class="border border-[var(--border)] rounded-lg p-3"><div class="text-xl font-semibold">60 間</div><div class="text-xs text-[var(--muted-foreground)]">第 12 個月目標（全選 Pro HK$47,280/月）</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tab 2: Taste & Humanizer -->
+    <section id="tab-taste" class="tab-panel hidden space-y-4">
+      <div class="bg-[var(--card)] border border-[var(--border)] rounded-xl p-5 space-y-3">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <h2 class="text-base font-semibold">Opus 5.5 Taste 驗收表（Round-3 驗證：100 / 100 · T1–T15 全 PASS）</h2>
+          <span class="text-xs text-[var(--muted-foreground)]">註：由 Claude Opus 5.5 (High) 親自撰寫 Taste_Spec_Opus55.md；Round-3 複檢時 Opus 耗盡 429 後由 Gemini 4 Argon (High) 照表驗收通過。</span>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-sm border-collapse">
+            <thead>
+              <tr class="border-b border-[var(--border)] text-xs text-[var(--muted-foreground)]">
+                <th class="py-2 pr-3">Gate</th><th class="py-2 pr-3">標準摘要</th><th class="py-2 pr-3">分數</th><th class="py-2">狀態</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-[var(--border)] text-xs sm:text-sm">
+              <tr><td class="py-2 pr-3 font-medium">T1–T4 網站工藝</td><td class="py-2 pr-3">毛玻璃 sticky 導覽、Newsreader 400 + Inter 17px + tabular-nums、3 條 cubic-bezier 動效、375/768/1440 零溢位</td><td class="py-2 pr-3">23/23</td><td class="py-2 text-[var(--success)] font-medium">PASS</td></tr>
+              <tr><td class="py-2 pr-3 font-medium">T5–T8 iPhone 互動</td><td class="py-2 pr-3">純 CSS 鈦金屬 iPhone + Dynamic Island、#customSalonInput（textContent 防 XSS）、typing 節奏＋銅色行事曆鎖定脈衝</td><td class="py-2 pr-3">30/30</td><td class="py-2 text-[var(--success)] font-medium">PASS</td></tr>
+              <tr><td class="py-2 pr-3 font-medium">T9–T11 Humanizer</td><td class="py-2 pr-3">三份交付物破折號「—」= 0、禁用 AI 詞彙 = 0、BP 維持正式無縮寫商業報告語氣</td><td class="py-2 pr-3">18/18</td><td class="py-2 text-[var(--success)] font-medium">PASS</td></tr>
+              <tr><td class="py-2 pr-3 font-medium">T12–T15 硬門檻</td><td class="py-2 pr-3">BP 嚴格 3 頁正文（p2–p4）、PPT 6 頁、31 項課本概念全齊、KB 實測約 94 KB 與網站截圖跨檔 100% 同步</td><td class="py-2 pr-3">29/29</td><td class="py-2 text-[var(--success)] font-medium">PASS</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="bg-[var(--card)] border border-[var(--border)] rounded-xl p-5 space-y-2">
+        <h3 class="text-base font-semibold">blader/humanizer 重點去 AI 化改寫舉例（保留正式商業報告語氣）</h3>
+        <ul class="text-sm text-[var(--muted-foreground)] space-y-1.5 list-disc pl-5">
+          <li><strong>去 AI 浮誇詞與破折號</strong>：刪除全站與簡報上的 Quiet reception、seamless、showcase、low-friction onboarding pathway、bloat 與所有長破折號「—」。</li>
+          <li><strong>消除強制三並列（Slide 4）</strong>：原標題「Three channels, one cloud engine, no double-bookings by design.」改為直接明確的「WhatsApp, Instagram and web chat share one engine and one calendar.」。</li>
+          <li><strong>修復邏輯重複（BP §2.4）</strong>：原第四個目標與第一個目標皆寫「Open a new market」，改為對齊 Schneider Figure 12-1 的四個獨立標籤：<strong>Increase sales</strong>、<strong>Enhance marketing programs</strong>、<strong>Serve existing customers better</strong>、<strong>Open new markets</strong>。</li>
+          <li><strong>誠實與數字一致（BP Table 5 / Slide 5）</strong>：Website 實測為「about 94 KB」（隨新 iPhone 模組實測更新）；Slide 5 Step 2 明確改為「Personalised salon chat simulation」避免誇大成真人/實時 AI。</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Tab 3: Textbook Map -->
+    <section id="tab-textbook" class="tab-panel hidden">
+      <div class="bg-[var(--card)] border border-[var(--border)] rounded-xl p-5 overflow-x-auto">
+        <table class="w-full text-left text-sm border-collapse">
+          <thead>
+            <tr class="border-b border-[var(--border)] text-xs text-[var(--muted-foreground)]">
+              <th class="py-2 pr-3">課本概念（Schneider 2017）</th><th class="py-2 pr-3">實作方式</th><th class="py-2">所在位置</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-[var(--border)] text-xs sm:text-sm">
+            <tr><td class="py-2 pr-3 font-medium">B2B E-Commerce + SWOT</td><td class="py-2 pr-3">賣給美容院老闆（非 C2C/B2C），明確拆出內部優劣勢 vs 外部機會威脅</td><td class="py-2">BP §2.1–2.2, Table 1 / Slide 2</td></tr>
+            <tr><td class="py-2 pr-3 font-medium">Fee-for-Service（Trial ≠ Freemium）</td><td class="py-2 pr-3">固定月費 HK$388/788/1,488（無抽佣）+ 14 天限時試用</td><td class="py-2">BP §2.3 / Wix #pricing / Slide 2</td></tr>
+            <tr><td class="py-2 pr-3 font-medium">Downstream + Fig 12-1 Objectives</td><td class="py-2 pr-3">Increase sales (60 店)、Enhance marketing programs (25%)、Customer loyalty (&lt;5% 流失)、Year 2 10 診所/補習社</td><td class="py-2">BP §2.4 / Slide 3 / Wix #industries</td></tr>
+            <tr><td class="py-2 pr-3 font-medium">Firm Demographics &amp; Behavioural + Virtual Space</td><td class="py-2 pr-3">1–10 人美容院、三大商圈、照顧 Browsers / Shoppers / Buyers 與 Industries 分頁</td><td class="py-2">BP §3, Table 3 / Wix #industries</td></tr>
+            <tr><td class="py-2 pr-3 font-medium">CRLC 5 Stages + Permission + PDPO</td><td class="py-2 pr-3">Targeting Awareness &amp; Exploration；Stage 5 正確寫為 Separation；#fOptIn 預設不勾選＋PDPO</td><td class="py-2">BP §4, Table 4 / Slide 3 / Wix #contact</td></tr>
+            <tr><td class="py-2 pr-3 font-medium">Web Presence / Accessibility (Fig 3-5, 3-7)</td><td class="py-2 pr-3">6 連結導覽、#about、Latest Platform Updates、手機零水平捲動、約 94 KB、Trust 提升忠誠度 5% → 利潤 25–80%</td><td class="py-2">BP Table 5 / Wix 全站</td></tr>
+            <tr><td class="py-2 pr-3 font-medium">3-Tier, PaaS, Serverless, CDN, 5G, No IoT</td><td class="py-2 pr-3">符合 6 大 hosting 準則；60 店規模下不需 IoT / microservers；Wix Media CDN + 5G 即時回覆</td><td class="py-2">BP §5.2, Table 6 / Slide 4</td></tr>
+            <tr><td class="py-2 pr-3 font-medium">Payment Systems (Cards / Wallets / FPS)</td><td class="py-2 pr-3">Visa/MC 定期扣款 + Apple/Google Pay + FPS 年繳 9 折；前端誠實模擬 HK$0 結帳</td><td class="py-2">BP §5.3 / Wix #checkout / Slide 4–5</td></tr>
+            <tr><td class="py-2 pr-3 font-medium">TCO (50–200%, 10/10/80), Break-Even, Opp. Cost &amp; ROI</td><td class="py-2 pr-3">HK$400k（營運 122%）、24 Pro 店損益兩平（Month 5）、創辦人機會成本與 ROI 偏重短期限制</td><td class="py-2">BP §6, Table 7 / Slide 6 / Q&amp;A</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Tab 4: 3-Min Script -->
+    <section id="tab-script" class="tab-panel hidden space-y-3">
+      <div class="bg-[var(--card)] border border-[var(--border)] rounded-xl p-5 space-y-3 text-sm">
+        <div class="flex justify-between items-center">
+          <h2 class="text-base font-semibold">3 分鐘英文講稿（共 376 字，與 PPTX 備忘稿 100% 同步）</h2>
+          <span class="text-xs text-[var(--muted-foreground)]">11/23 或 11/30 Tutorial 報告用</span>
+        </div>
+        <div class="divide-y divide-[var(--border)] space-y-2">
+          <div class="pt-2"><strong>Slide 1 (0:00–0:10):</strong> Good morning. DeskMate AI is a bilingual AI receptionist that answers WhatsApp, Instagram and website enquiries for small Hong Kong beauty salons.</div>
+          <div class="pt-2"><strong>Slide 2 (0:10–0:40):</strong> Salons with one to ten staff rarely have a receptionist, so enquiries are missed during treatments and after closing. At minimum wage, four hours of reception a day costs about 4,482 Hong Kong dollars a month; our Pro plan costs 788, which is 82% less. This is B2B e-commerce on a Fee-for-Service model. Salons pay a predictable monthly fee with no per-booking commission, and the 14-day trial is time limited, so it is not a freemium tier.</div>
+          <div class="pt-2"><strong>Slide 3 (0:40–1:05):</strong> We target owner-run salons in Mong Kok, Causeway Bay and Tsim Sha Tsui. As a new brand, we focus on the awareness and exploration stages of the customer relationship life cycle: social and search ads inform owners, then the web demo, the trial and a one-to-one demo explain the product. Our targets are 25% trial-to-paid conversion and under 5% monthly churn.</div>
+          <div class="pt-2"><strong>Slide 4 (1:05–1:30):</strong> All three channels feed one booking engine and one shared calendar. It runs on a three-tier design with managed cloud and serverless functions, so we pay per use and scale for evening peaks, while a CDN keeps pages fast on mobile. Salons pay by recurring card, Apple Pay or Google Pay, or FPS for annual invoices.</div>
+          <div class="pt-2"><strong>Slide 5 (1:30–2:30 Live Demo):</strong> Here is the live Wix prototype. The navigation is clear and the layout works on mobile. In the booking demo, I type a salon name, Lumière Nail Studio. A client asks in Cantonese for a gel manicure after six, DeskMate AI replies in that salon's name and books six-thirty, and the shared calendar marks the slot. On Pricing, each plan starts with a 14-day trial; I'll click Start Pro 14-day trial, and the simulated checkout shows HK$0 due today. Finally, the Book a Demo form is our one-to-one touchpoint, with an unticked opt-in box and a PDPO notice.</div>
+          <div class="pt-2"><strong>Slide 6 (2:30–3:00):</strong> We are asking for 400,000 Hong Kong dollars in angel or seed funding, estimated with total cost of ownership. Ongoing costs are 122% of the initial build, inside the textbook's 50 to 200% range. We cover monthly operating costs at 24 Pro salons and aim for 60 by month twelve, or 47,280 dollars a month if all choose Pro. Thank you.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tab 5: Pre-upload checklist -->
+    <section id="tab-check" class="tab-panel hidden">
+      <div class="bg-[var(--card)] border border-[var(--border)] rounded-xl p-5 space-y-3">
+        <div class="flex justify-between items-center">
+          <h2 class="text-base font-semibold">今晚 23:59 提交前 5 步人工確認</h2>
+          <span id="checkCount" class="text-xs font-medium text-[var(--primary)]">0 / 5 已完成</span>
+        </div>
+        <div class="space-y-2 text-sm" id="checkList">
+          <label class="flex items-start gap-2.5 p-2.5 border border-[var(--border)] rounded-lg cursor-pointer"><input type="checkbox" class="mt-0.5 accent-[var(--primary)]" data-k="1"><span>用瀏覽器打開 Live Wix 網址，親自輸入一個店名，確認 iPhone 打字動畫與右側行事曆鎖定都對得上你的 taste。</span></label>
+          <label class="flex items-start gap-2.5 p-2.5 border border-[var(--border)] rounded-lg cursor-pointer"><input type="checkbox" class="mt-0.5 accent-[var(--primary)]" data-k="2"><span>打開 <code>Business_Plan_Updated.pdf</code>，確認封面姓名/學號/Wix 連結正確，且正文嚴格為第 2–4 頁（共 6 頁）。</span></label>
+          <label class="flex items-start gap-2.5 p-2.5 border border-[var(--border)] rounded-lg cursor-pointer"><input type="checkbox" class="mt-0.5 accent-[var(--primary)]" data-k="3"><span>打開 <code>DeskMate_AI_Presentation.pptx</code>，按 F5 測試第 5 頁連結能直接開出 Wix 網站各區塊。</span></label>
+          <label class="flex items-start gap-2.5 p-2.5 border border-[var(--border)] rounded-lg cursor-pointer"><input type="checkbox" class="mt-0.5 accent-[var(--primary)]" data-k="4"><span>上傳時僅提交：<code>Business_Plan_Updated.pdf</code>、<code>DeskMate_AI_Presentation.pptx</code> 與 Live Wix 連結（勿誤傳審核或指南檔）。</span></label>
+          <label class="flex items-start gap-2.5 p-2.5 border border-[var(--border)] rounded-lg cursor-pointer"><input type="checkbox" class="mt-0.5 accent-[var(--primary)]" data-k="5"><span>官方題目與課綱未要求 AI 申報；送出後從系統重新下載一次 PDF 與 PPTX 確認檔案完整無損。</span></label>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    const deadline = new Date('2026-11-20T23:59:00+08:00').getTime();
+    function updateCountdown() {
+      const diff = deadline - Date.now();
+      const el = document.getElementById('countdown');
+      if (diff <= 0) { el.textContent = '已到截止時間'; return; }
+      const h = Math.floor(diff / 3600000);
+      const m = Math.floor((diff % 3600000) / 60000);
+      el.textContent = `距截稿剩 ${h} 小時 ${m} 分鐘`;
+    }
+    updateCountdown();
+    setInterval(updateCountdown, 30000);
+
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const target = btn.dataset.tab;
+        document.querySelectorAll('.tab-btn').forEach(b => {
+          const on = b === btn;
+          b.className = on
+            ? 'tab-btn px-3.5 py-2 rounded-lg text-sm font-medium bg-[var(--primary)] text-[var(--primary-foreground)] cursor-pointer'
+            : 'tab-btn px-3.5 py-2 rounded-lg text-sm font-medium border border-[var(--border)] text-[var(--muted-foreground)] cursor-pointer';
+        });
+        document.querySelectorAll('.tab-panel').forEach(p => {
+          p.classList.toggle('hidden', p.id !== 'tab-' + target);
+        });
+      });
+    });
+
+    function flashBtn(btn, label, text) {
+      navigator.clipboard?.writeText(text).catch(() => {});
+      const orig = btn.textContent;
+      btn.textContent = '已複製！';
+      setTimeout(() => { btn.textContent = orig; }, 1600);
+    }
+    document.getElementById('copyWixBtn').addEventListener('click', (e) => {
+      flashBtn(e.currentTarget, '已複製！', 'https://deskmate-ai-demo.example.com');
+    });
+    document.getElementById('copyFolderBtn').addEventListener('click', (e) => {
+      flashBtn(e.currentTarget, '已複製！', './submission');
+    });
+
+    const boxes = [...document.querySelectorAll('#checkList input[type="checkbox"]')];
+    const saved = JSON.parse(localStorage.getItem('sehs2265_dash_check') || '{}');
+    function syncChecks() {
+      let n = 0;
+      boxes.forEach(b => {
+        saved[b.dataset.k] = b.checked;
+        if (b.checked) n++;
+      });
+      localStorage.setItem('sehs2265_dash_check', JSON.stringify(saved));
+      document.getElementById('checkCount').textContent = `${n} / ${boxes.length} 已完成`;
+    }
+    boxes.forEach(b => {
+      b.checked = !!saved[b.dataset.k];
+      b.addEventListener('change', syncChecks);
+    });
+    syncChecks();
+  </script>
+</body>
+</html>

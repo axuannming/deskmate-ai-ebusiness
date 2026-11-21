@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1920">
+<title>DeskMate AI · Slide 4: Operations &amp; Technology</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    width: 1920px; height: 1080px; overflow: hidden;
+    background: #F8F6F1; color: #1F1E1C;
+    font-family: 'Inter', 'Noto Sans TC', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .canvas {
+    width: 1920px; height: 1080px;
+    padding: 58px 104px 52px;
+    display: flex; flex-direction: column; justify-content: space-between;
+  }
+  .header {
+    padding-bottom: 24px; border-bottom: 1px solid #E3DED5;
+    display: flex; justify-content: space-between; align-items: flex-end;
+  }
+  .h-title {
+    font-family: 'Newsreader', serif; font-weight: 300;
+    font-size: 44px; line-height: 1.08; letter-spacing: -0.02em; white-space: nowrap;
+  }
+  .h-right { font-size: 18px; font-weight: 400; color: #555049; text-align: right; white-space: nowrap; }
+
+  /* Center Architectural 3-Column Flow Diagram */
+  .flow-wrap {
+    display: grid; grid-template-columns: 1fr 48px 1.15fr 48px 1.05fr;
+    align-items: center; gap: 0; padding: 32px 0;
+    border-bottom: 1px solid #E3DED5; flex: 1;
+  }
+  .flow-col {
+    background: #FFFFFF; border: 1px solid #E3DED5;
+    padding: 36px 36px; display: flex; flex-direction: column; justify-content: space-between;
+    min-height: 556px;
+  }
+  .flow-col.core {
+    background: #F2EFE8; border-top: 3px solid #85623A;
+  }
+  .f-k { font-size: 18px; font-weight: 500; color: #7C5C34; margin-bottom: 10px; }
+  .f-h { font-family: 'Newsreader', serif; font-size: 34px; font-weight: 400; color: #1F1E1C; margin-bottom: 18px; }
+  .f-list { list-style: none; border-top: 1px solid #E3DED5; }
+  .f-list li {
+    padding: 16px 0; border-bottom: 1px solid #E3DED5;
+    font-size: 24px; font-weight: 300; color: #3A3631; line-height: 1.35;
+  }
+  .f-list li:last-child { border-bottom: none; }
+  .f-list strong { font-weight: 500; color: #1F1E1C; }
+
+  .connector {
+    display: flex; align-items: center; justify-content: center;
+  }
+  .conn-line { width: 100%; height: 1.5px; background: #B8AE9E; }
+
+  .sample-box {
+    margin-top: 18px; padding-top: 16px; border-top: 1px solid #DED8CD;
+    font-size: 24px; font-weight: 300; color: #4A4640; line-height: 1.4;
+  }
+  .sample-box strong { color: #7C5C34; font-weight: 500; }
+
+  /* Lower Payment & Compliance Architecture Strip */
+  .pay-strip {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    padding-top: 28px; gap: 36px;
+  }
+  .p-col { padding-right: 24px; border-right: 1px solid #E3DED5; }
+  .p-col:last-child { border-right: none; padding-right: 0; }
+  .p-label { font-size: 18px; font-weight: 500; color: #7C5C34; margin-bottom: 6px; }
+  .p-title { font-family: 'Newsreader', serif; font-size: 28px; font-weight: 400; color: #1F1E1C; margin-bottom: 6px; }
+  .p-desc { font-size: 24px; font-weight: 300; color: #4A4640; line-height: 1.35; }
+</style>
+</head>
+<body>
+<div class="canvas">
+  <header class="header">
+    <h1 class="h-title">WhatsApp, Instagram and web chat share one engine and one calendar.</h1>
+    <small class="h-right">Operations &amp; Technology<br>Three-Tier Cloud &amp; Payment Stack</small>
+  </header>
+
+  <section class="flow-wrap">
+    <div class="flow-col">
+      <div>
+        <small class="f-k" style="display:block;">Inbound Enquiries</small>
+        <h2 class="f-h">Enquiries in</h2>
+        <ul class="f-list">
+          <li><strong>WhatsApp Business:</strong> main HK booking channel</li>
+          <li><strong>Instagram DM:</strong> salon discovery traffic</li>
+          <li><strong>Salon website chat:</strong> direct search enquiries</li>
+        </ul>
+      </div>
+      <div class="sample-box">「聽日放工 6 點後有冇位整 Gel 甲？」</div>
+    </div>
+
+    <div class="connector"><div class="conn-line"></div></div>
+
+    <div class="flow-col core">
+      <div>
+        <small class="f-k" style="display:block;">AI &amp; Cloud Layer</small>
+        <h2 class="f-h">DeskMate AI Engine</h2>
+        <ul class="f-list">
+          <li><strong>Cantonese &amp; English NLP</strong> configured with each salon's menu.</li>
+          <li><strong>Three-tier PaaS &amp; serverless</strong> scale for evening peaks.</li>
+          <li><strong>CDN and 5G</strong> give fast mobile replies; the stack meets the six hosting criteria.</li>
+        </ul>
+      </div>
+      <div class="sample-box">Handles up to <strong>60,000 chats/mo</strong> across 60 Pro salons.</div>
+    </div>
+
+    <div class="connector"><div class="conn-line"></div></div>
+
+    <div class="flow-col">
+      <div>
+        <small class="f-k" style="display:block;">Salon Fulfilment</small>
+        <h2 class="f-h">One Shared Calendar</h2>
+        <ul class="f-list">
+          <li><strong>Real-Time Slot Lock</strong> prevents channel clashes</li>
+          <li><strong>24-Hour Reminders</strong> cut costly no-shows</li>
+          <li><strong>Owner Handoff</strong> escalates custom bridal requests</li>
+        </ul>
+      </div>
+      <div class="sample-box"><strong>Booked:</strong> Gel Manicure (HK$280, Thu 18:30)</div>
+    </div>
+  </section>
+
+  <footer class="pay-strip">
+    <div class="p-col">
+      <small class="p-label" style="display:block;">Recurring Billing</small>
+      <div class="p-title">Visa &amp; Mastercard</div>
+      <p class="p-desc">Automated monthly subscriptions after trial.</p>
+    </div>
+    <div class="p-col">
+      <small class="p-label" style="display:block;">Express Checkout</small>
+      <div class="p-title">Apple &amp; Google Pay</div>
+      <p class="p-desc">Fast mobile onboarding for decisive buyers.</p>
+    </div>
+    <div class="p-col">
+      <small class="p-label" style="display:block;">Annual Invoices</small>
+      <div class="p-title">Hong Kong FPS</div>
+      <p class="p-desc">Zero card fees; 10% off prepaid annual plans.</p>
+    </div>
+    <div class="p-col">
+      <small class="p-label" style="display:block;">Governance</small>
+      <div class="p-title">PDPO &amp; Permission</div>
+      <p class="p-desc">Opt-in updates only; minimal booking data stored.</p>
+    </div>
+  </footer>
+</div>
+</body>
+</html>

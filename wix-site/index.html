@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DeskMate AI · 24/7 bilingual AI receptionist for Hong Kong beauty salons</title>
+  <meta name="description" content="24/7 Cantonese and English AI receptionist for independent Hong Kong beauty and hair salons across WhatsApp, Instagram and website chat.">
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&family=Noto+Sans+TC:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body id="top">
+  <a href="#mainContent" class="skip-link">Skip to main content</a>
+
+  <!-- Sticky Frosted Glass Navigation -->
+  <header class="site-header" id="siteHeader">
+    <div class="nav-inner">
+      <a href="#top" class="brand" aria-label="DeskMate AI Home">DESKMATE AI</a>
+
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#top" class="nav-link active">Home</a>
+        <a href="#how-it-works" class="nav-link">How it works</a>
+        <a href="#industries" class="nav-link">Industries</a>
+        <a href="#pricing" class="nav-link">Pricing</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#contact" class="nav-text-btn">Book a demo</a>
+        <a href="#checkout" class="btn btn-solid btn-sm" data-select-plan="pro">Start 14-day trial</a>
+      </div>
+
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+
+    <div class="mobile-drawer" id="mobileDrawer" hidden>
+      <a href="#top" class="m-link">Home</a>
+      <a href="#how-it-works" class="m-link">How it works</a>
+      <a href="#industries" class="m-link">Industries</a>
+      <a href="#pricing" class="m-link">Pricing</a>
+      <a href="#faq" class="m-link">FAQ</a>
+      <a href="#contact" class="m-link">Contact</a>
+      <div class="m-actions">
+        <a href="#checkout" class="btn btn-solid" data-select-plan="pro">Start 14-day free trial</a>
+        <a href="#contact" class="btn btn-outline">Book a private demo</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="mainContent">
+    <!-- 1. HERO -->
+    <section class="hero">
+      <div class="container hero-copy">
+        <h1>Your hands stay with the client.</h1>
+        <p class="hero-lead">Cantonese and English reception, 24 hours a day, for independent Hong Kong beauty and hair salons. DeskMate AI answers WhatsApp, Instagram and website enquiries and books them into one shared calendar, from HK$388 a month.</p>
+        <div class="cta-row">
+          <a href="#checkout" class="btn btn-solid" data-select-plan="pro">Start 14-day free trial (HK$0 today)</a>
+          <a href="#contact" class="btn btn-outline">Book a private demo</a>
+        </div>
+      </div>
+
+      <div class="container">
+        <figure class="hero-frame">
+          <img src="https://static.wixstatic.com/media/ddc425_7ab8beaba08a470a92e26b55a6c7d9fa~mv2.jpg" alt="Sunlit Hong Kong boutique beauty salon reception counter and treatment room">
+        </figure>
+
+        <div class="status-strip">
+          <div class="st-col">
+            <span class="st-label">Illustrative WhatsApp booking at 21:14</span>
+            <span class="st-val stat-val">「聽日六點後有冇位整 Gel 甲？」 Booked: <strong>Gel Manicure, Thu 18:30, HK$280</strong></span>
+          </div>
+          <div class="st-col">
+            <span class="st-label">Monthly cost comparison</span>
+            <span class="st-val stat-val">Pro HK$788 vs. HK$4,482 part-time staff (82% lower)</span>
+          </div>
+          <div class="st-col st-right">
+            <span class="st-label">Onboarding</span>
+            <span class="st-val">Done-for-you setup included</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. HOW IT WORKS + CUSTOM-SALON IPHONE BOOKING DEMO -->
+    <section class="section" id="how-it-works">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2>One calm schedule across every channel.</h2>
+          <p class="section-sub">Type your salon's name and watch a sample Cantonese and English booking land on the shared salon calendar.</p>
+        </div>
+
+        <div class="demo-workbench" id="demo">
+          <div class="personalise">
+            <label for="customSalonInput" class="personalise-label">Personalise for your salon</label>
+            <input id="customSalonInput" type="text" value="Lumière Nail Studio" maxlength="40" autocomplete="organization" spellcheck="false" aria-describedby="salonHint">
+            <div class="salon-pills" role="group" aria-label="Sample salon names">
+              <button type="button" class="salon-pill is-active" data-salon="Lumière Nail Studio" data-preset="nail">Lumière Nail Studio</button>
+              <button type="button" class="salon-pill" data-salon="Mong Kok Hair Lab" data-preset="hair">Mong Kok Hair Lab</button>
+              <button type="button" class="salon-pill" data-salon="TST Skin Atelier" data-preset="skin">TST Skin Atelier</button>
+            </div>
+            <p id="salonHint" class="meta">Sample salon names. Replies are scripted examples (prototype simulation), not live AI output.</p>
+          </div>
+
+          <div class="demo-device-col">
+            <div class="iphone" role="region" aria-label="Prototype simulation of a salon chat on a phone">
+              <span class="iphone-btn iphone-btn--action" aria-hidden="true"></span>
+              <span class="iphone-btn iphone-btn--vol" aria-hidden="true"></span>
+              <span class="iphone-btn iphone-btn--power" aria-hidden="true"></span>
+              <div class="iphone-screen" data-channel="whatsapp">
+                <div class="dynamic-island" aria-hidden="true"></div>
+                <div class="web-url-bar">
+                  <svg class="lock-icon" viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="3" y="7" width="10" height="7" rx="2" />
+                    <path d="M5 7V5a3 3 0 0 1 6 0v2" />
+                  </svg>
+                  <span class="web-url"></span>
+                </div>
+                <div class="chat-head">
+                  <span class="chat-avatar" id="phoneSalonInitials" aria-hidden="true">LN</span>
+                  <div class="chat-head-text">
+                    <strong id="phoneSalonName">Lumière Nail Studio</strong>
+                    <span class="chat-handle"></span>
+                    <div class="chat-meta">
+                      <span class="chat-status-dot" aria-hidden="true"></span>
+                      <span class="chat-sub" id="phoneChannel">WhatsApp Business · Cantonese reply</span>
+                    </div>
+                  </div>
+                  <span class="chat-channel-badge" aria-hidden="true">WA</span>
+                </div>
+                <div class="chat-thread" id="transcriptBody" aria-live="polite" aria-atomic="false">
+                  <div class="bubble bubble--in">你好 Lumière Nail Studio，想 book 星期四 6:30 PM 做 Gel Manicure，有冇位？<time>21:14</time></div>
+                  <div class="bubble bubble--out">多謝聯絡 Lumière Nail Studio！幫你訂咗星期四 18:30 嘅凝膠美甲，HK$280，需時 60 分鐘。當日 10:00 會提你。<time>21:14 <span class="chat-read-mark" aria-hidden="true">✓✓</span></time></div>
+                </div>
+                <div class="iphone-composer"><span>WhatsApp Business · Auto-reply active</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="sheet sheet-calendar">
+            <div class="sheet-bar">
+              <div>
+                <h3 class="sheet-title">Shared salon calendar</h3>
+                <p class="sheet-meta" id="calendarDayLabel">Thursday · Lumière Nail Studio · WhatsApp synced</p>
+              </div>
+              <span class="bronze-note" id="syncStatus">Illustrative: confirmed in 0.8s</span>
+            </div>
+
+            <div class="calendar-slots" id="calendarSlots">
+              <div class="cal-slot slot">
+                <span class="cal-t slot-time">17:00</span>
+                <div>
+                  <div class="cal-svc">Classic Facial</div>
+                  <div class="cal-sub">60 mins, Room 2</div>
+                </div>
+                <span class="cal-st slot-status">Booked</span>
+              </div>
+              <div class="cal-slot slot is-locked">
+                <span class="cal-t slot-time">18:30</span>
+                <div>
+                  <div class="cal-svc">Gel Manicure · HK$280</div>
+                  <div class="cal-sub">60 mins, Nail Station 1 · Reminder at 10:00 AM</div>
+                </div>
+                <span class="cal-st slot-status">Confirmed via WhatsApp</span>
+              </div>
+              <div class="cal-slot slot">
+                <span class="cal-t slot-time">20:00</span>
+                <div>
+                  <div class="cal-svc">Available slot</div>
+                  <div class="cal-sub">Open for instant booking</div>
+                </div>
+                <span class="cal-st slot-status">Open</span>
+              </div>
+            </div>
+
+            <div class="calendar-foot">
+              <span>Designed to prevent double-bookings across WhatsApp, Instagram and website chat.</span>
+              <span class="calendar-detail">Illustrative: auto-reminder queued 10:00 AM</span>
+            </div>
+          </div>
+
+          <div class="demo-controls">
+            <div class="demo-controls-head">
+              <p class="sheet-meta">Language auto-match: Chinese or HK mixed replies in Cantonese; English replies in English.</p>
+              <div class="controls-switch-group">
+                <div class="segmented" id="langTabs" role="tablist" aria-label="Client message language">
+                  <button type="button" class="lang-btn active" data-lang="mixed" role="tab" aria-selected="true" aria-controls="transcriptBody">HK mixed (中英)</button>
+                  <button type="button" class="lang-btn" data-lang="zh" role="tab" aria-selected="false" aria-controls="transcriptBody">中文</button>
+                  <button type="button" class="lang-btn" data-lang="en" role="tab" aria-selected="false" aria-controls="transcriptBody">English</button>
+                </div>
+                <div class="segmented" role="tablist" aria-label="Enquiry channel">
+                  <button type="button" class="seg-btn active" data-channel="whatsapp" role="tab" aria-selected="true" aria-controls="transcriptBody">WhatsApp</button>
+                  <button type="button" class="seg-btn" data-channel="instagram" role="tab" aria-selected="false" aria-controls="transcriptBody">Instagram</button>
+                  <button type="button" class="seg-btn" data-channel="web" role="tab" aria-selected="false" aria-controls="transcriptBody">Website</button>
+                </div>
+              </div>
+            </div>
+            <div class="prompt-bar">
+              <span class="prompt-label">Try another scenario</span>
+              <div class="prompt-actions">
+                <button type="button" class="prompt-btn active" data-scenario="book">Book evening slot (18:30)</button>
+                <button type="button" class="prompt-btn" data-scenario="price">Ask treatment menu</button>
+                <button type="button" class="prompt-btn" data-scenario="reschedule">Reschedule to Friday</button>
+                <button type="button" class="prompt-btn" data-scenario="handoff">Hand off to owner</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3-Step Onboarding Strip -->
+        <div class="steps-grid">
+          <div class="step-item reveal" style="--i:0">
+            <div class="step-num">Step 1</div>
+            <h3>We configure your salon</h3>
+            <p>Send us your treatment menu, prices, staff hours and booking rules. We build and test your bilingual receptionist before launch.</p>
+          </div>
+          <div class="step-item reveal" style="--i:1">
+            <div class="step-num">Step 2</div>
+            <h3>Connect all three channels</h3>
+            <p>Link your WhatsApp Business number, Instagram DM and salon website chat to one shared availability calendar.</p>
+          </div>
+          <div class="step-item reveal" style="--i:2">
+            <div class="step-num">Step 3</div>
+            <h3>Confirm and remind 24/7</h3>
+            <p>Clients receive instant Cantonese or English replies after closing, automatic reminders and direct owner handoff for custom requests.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. COST BENCHMARK & INTERACTIVE SAVINGS CALCULATOR -->
+    <section class="section section-tinted">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2>Built for independent salon economics.</h2>
+          <p class="section-sub">Based on Hong Kong's statutory minimum wage of HK$43.10 per hour (Labour Department, 2026), hiring part-time desk cover for 4 hours a day across 26 days costs at least HK$4,482 per month.</p>
+        </div>
+
+        <div class="monuments-grid">
+          <div class="monument reveal" style="--i:0">
+            <div class="mon-val stat-val" id="calcStaff">HK$4,482</div>
+            <div class="mon-title">Part-time desk benchmark</div>
+            <p class="mon-desc" id="calcStaffDetail">4 hrs/day × 26 days at HK$43.10/hr minimum wage</p>
+          </div>
+          <div class="monument reveal" style="--i:1">
+            <div class="mon-val stat-val">HK$788</div>
+            <div class="mon-title">DeskMate AI Pro plan</div>
+            <p class="mon-desc">1,000 bilingual chats/mo across WhatsApp, Instagram and web</p>
+          </div>
+          <div class="monument reveal" style="--i:2">
+            <div class="mon-val stat-val bronze" id="calcPct">-82%</div>
+            <div class="mon-title">Monthly reception cost</div>
+            <p class="mon-desc" id="calcAnnual">Estimated HK$44,328 saved per year</p>
+          </div>
+        </div>
+
+        <div class="slider-panel">
+          <div class="slider-meta">
+            <label for="hoursSlider">Adjust daily reception hours covered</label>
+            <strong id="hoursValue" class="stat-val">4 hours / day (26 days/mo)</strong>
+          </div>
+          <input type="range" id="hoursSlider" min="2" max="8" step="1" value="4" aria-label="Daily reception hours">
+          <div class="slider-scale">
+            <span>2 hrs/day</span>
+            <span>4 hrs/day (Plan benchmark)</span>
+            <span>6 hrs/day</span>
+            <span>8 hrs/day (Full-time)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. INDUSTRIES & YEAR 2 EXPANSION -->
+    <section class="section" id="industries">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2>Starting with Hong Kong beauty salons, built to expand.</h2>
+          <p class="section-sub">Year 1 focuses on independent beauty and hair salons in Mong Kok, Causeway Bay and Tsim Sha Tsui, before extending the same bilingual scheduling engine in Year 2.</p>
+        </div>
+
+        <div class="industry-layout">
+          <div class="industry-tabs">
+            <button type="button" class="ind-btn active" data-industry="salons">
+              <span class="ind-phase">Year 1 launch</span>
+              <strong>Beauty and hair salons</strong>
+              <span>Nail studios, facial rooms, lash and brow bars, and hair salons with 1 to 10 staff.</span>
+            </button>
+            <button type="button" class="ind-btn" data-industry="clinics">
+              <span class="ind-phase">Year 2 expansion</span>
+              <strong>Dental and wellness clinics</strong>
+              <span>Bilingual intake, doctor and room availability sync, and automated visit reminders.</span>
+            </button>
+            <button type="button" class="ind-btn" data-industry="tutorial">
+              <span class="ind-phase">Year 2 expansion</span>
+              <strong>Tutorial centres</strong>
+              <span>Parent enquiries, trial lesson bookings and timetable rescheduling on WhatsApp.</span>
+            </button>
+          </div>
+
+          <div class="industry-detail">
+            <div class="ind-photo" id="industryPhoto">
+              <img src="https://static.wixstatic.com/media/ddc425_44cef00f3a7545049d4da441e068cb6e~mv2.jpg" alt="Hong Kong boutique beauty studio after closing overlooking Victoria Harbour">
+            </div>
+            <div class="ind-visual-card" id="industryVisual" hidden>
+              <p class="ind-visual-eyebrow">YEAR 2 EXPANSION · MONTH 13–18</p>
+              <h3></h3>
+              <ul class="ind-visual-chips"></ul>
+            </div>
+            <div class="ind-copy" id="industryContent">
+              <h3>Hong Kong beauty and hair salons</h3>
+              <p>Designed for independent salons in Mong Kok, Causeway Bay and Tsim Sha Tsui with 1 to 10 staff and no full-time receptionist.</p>
+              <ul class="ind-bullets">
+                <li>Instant Cantonese and English replies across WhatsApp, Instagram DM and website chat</li>
+                <li>Pre-configured with your exact nail, facial, lash or hair treatment durations and prices</li>
+                <li>Automatic 24-hour reminders reduce costly late cancellations and no-shows</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Honestly Labeled Sample Testimonial -->
+        <blockquote class="testimonial reveal">
+          <p>"Before DeskMate AI, I spent an hour every night after closing replying to WhatsApp and Instagram DMs about Gel Manicure slots. Now clients get a Cantonese reply in seconds and my morning calendar is already organised."</p>
+          <footer>
+            <strong>Mei-Ling C.</strong>, independent nail and facial studio, Causeway Bay <span class="honest-tag">(Sample testimonial, illustrative prototype copy)</span>
+          </footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- 5. PRICING PLANS (B2B FEE-FOR-SERVICE) -->
+    <section class="section section-tinted" id="pricing">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2>Transparent monthly plans.</h2>
+          <p class="section-sub">Fixed monthly B2B Fee-for-Service pricing with no per-booking commission. Every plan starts with a 14-day free trial and done-for-you onboarding.</p>
+        </div>
+
+        <div class="pricing-grid">
+          <article class="plan-col reveal" style="--i:0">
+            <div class="plan-top">
+              <h3>Starter</h3>
+              <p class="plan-for">Solo studios and single-room therapists</p>
+              <div class="plan-price">HK$388<span> / month</span></div>
+              <p class="plan-trial">14-day free trial (HK$0 today)</p>
+            </div>
+            <ul class="plan-features">
+              <li>1 WhatsApp Business channel</li>
+              <li>Up to 300 bilingual conversations / mo</li>
+              <li>Cantonese and English FAQ + booking capture</li>
+              <li>Done-for-you menu and hours setup</li>
+              <li>Owner handoff notifications</li>
+            </ul>
+            <a href="#checkout" class="btn btn-outline plan-cta" data-select-plan="starter">Start Starter 14-day trial</a>
+          </article>
+
+          <article class="plan-col plan-featured reveal" style="--i:1">
+            <div class="plan-top">
+              <div class="plan-head-row">
+                <h3>Pro</h3>
+                <span class="rec-label">Most popular</span>
+              </div>
+              <p class="plan-for">Growing HK beauty and hair salons (1 to 10 staff)</p>
+              <div class="plan-price">HK$788<span> / month</span></div>
+              <p class="plan-trial">14-day free trial (HK$0 today)</p>
+            </div>
+            <ul class="plan-features">
+              <li>WhatsApp + Instagram DM + Website chat</li>
+              <li>Up to 1,000 bilingual conversations / mo</li>
+              <li>One shared salon calendar and auto-reschedule</li>
+              <li>Automated 24-hour client reminders</li>
+              <li>Done-for-you menu and hours onboarding</li>
+            </ul>
+            <a href="#checkout" class="btn btn-solid plan-cta" data-select-plan="pro">Start Pro 14-day trial</a>
+          </article>
+
+          <article class="plan-col reveal" style="--i:2">
+            <div class="plan-top">
+              <h3>Premium</h3>
+              <p class="plan-for">Multi-room and multi-branch salon groups</p>
+              <div class="plan-price">HK$1,488<span> / month</span></div>
+              <p class="plan-trial">14-day free trial (HK$0 today)</p>
+            </div>
+            <ul class="plan-features">
+              <li>Everything in Pro across multiple branches</li>
+              <li>Deposit payment links and confirmation checks</li>
+              <li>Automated no-show and re-booking follow-up</li>
+              <li>Custom staff and treatment room routing</li>
+              <li>Priority Hong Kong WhatsApp support</li>
+            </ul>
+            <a href="#checkout" class="btn btn-outline plan-cta" data-select-plan="premium">Start Premium 14-day trial</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. INTERACTIVE PROTOTYPE CHECKOUT MOCK-UP -->
+    <section class="section" id="checkout">
+      <div class="container">
+        <div class="section-head">
+          <h2>Start your 14-day free trial.</h2>
+          <p class="section-sub">Choose a plan, activate the HK$0 trial and see the Hong Kong payment methods (cards, mobile wallets and FPS). No payment is taken.</p>
+        </div>
+
+        <div class="checkout-shell" id="checkoutShell">
+          <!-- Left: Form & Payment Method Selector -->
+          <div class="checkout-main" id="checkoutFormPane">
+            <div class="sim-notice">Prototype simulation hosted on Wix Headless. This mock-up takes no payment and stores no card details.</div>
+
+            <div class="checkout-group">
+              <div class="group-label">1. Select plan and billing cycle</div>
+              <div class="plan-switcher" role="radiogroup" aria-label="Choose subscription plan">
+                <button type="button" class="sw-btn" data-plan="starter" role="radio" aria-checked="false">Starter · HK$388/mo</button>
+                <button type="button" class="sw-btn active" data-plan="pro" role="radio" aria-checked="true">Pro · HK$788/mo</button>
+                <button type="button" class="sw-btn" data-plan="premium" role="radio" aria-checked="false">Premium · HK$1,488/mo</button>
+              </div>
+              <div class="cycle-row">
+                <label class="radio-inline">
+                  <input type="radio" name="billingCycle" value="monthly" checked>
+                  <span>Monthly recurring (after 14-day free trial)</span>
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="billingCycle" value="annual">
+                  <span>Annual invoice via FPS (save 10%)</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="checkout-group">
+              <div class="group-label">2. Account details</div>
+              <div class="form-grid-2">
+                <div class="field">
+                  <label for="coSalon">Shop or owner name</label>
+                  <input type="text" id="coSalon" placeholder="e.g. Lumière Nail Studio or Chloe Chan" value="Lumière Nail Studio">
+                </div>
+                <div class="field">
+                  <label for="coEmail">Work or personal email</label>
+                  <input type="email" id="coEmail" placeholder="e.g. chloe@example.com or owner@shop.example.com" value="owner@lumierenailstudio.example.com">
+                </div>
+              </div>
+            </div>
+
+            <div class="checkout-group">
+              <div class="group-label">3. Payment method (for post-trial billing)</div>
+              <div class="pay-methods" role="radiogroup" aria-label="Payment method">
+                <button type="button" class="pay-btn active" data-pay="card" role="radio" aria-checked="true">Visa / Mastercard</button>
+                <button type="button" class="pay-btn" data-pay="wallet" role="radio" aria-checked="false">Apple Pay / Google Pay</button>
+                <button type="button" class="pay-btn" data-pay="fps" role="radio" aria-checked="false">FPS Bank Transfer</button>
+              </div>
+
+              <div class="pay-detail" id="payDetailCard">
+                <div class="form-grid-2">
+                  <div class="field">
+                    <label for="mockCard">Card number (simulated)</label>
+                    <input type="text" id="mockCard" value="4242 •••• •••• 4242" readonly>
+                  </div>
+                  <div class="field">
+                    <label for="mockExp">Expiry / CVC (simulated)</label>
+                    <input type="text" id="mockExp" value="08 / 29   •   000" readonly>
+                  </div>
+                </div>
+                <p class="pay-hint">Card authorisation is simulated. HK$0 is charged during your 14-day trial; cancel anytime before Day 14, or book a 1-to-1 demo below first.</p>
+              </div>
+
+              <div class="pay-detail" id="payDetailWallet" hidden>
+                <p class="pay-hint">Express checkout via Apple Pay or Google Pay tokenises your card for recurring billing after the 14-day free trial ends. No amount is collected today.</p>
+              </div>
+
+              <div class="pay-detail" id="payDetailFps" hidden>
+                <p class="pay-hint">Hong Kong Faster Payment System (FPS) bank transfer is supported for annual subscription invoices. We email your FPS QR invoice on Day 12 of your trial.</p>
+              </div>
+            </div>
+
+            <div class="checkout-error" id="checkoutError" hidden></div>
+
+            <button type="button" class="btn btn-solid btn-full" id="confirmCheckoutBtn">Activate 14-day free trial · HK$0 today</button>
+          </div>
+
+          <!-- Confirmation State (shown after simulated checkout submission) -->
+          <div class="checkout-confirm" id="checkoutConfirmPane" hidden>
+            <div class="sim-notice">Trial activated (prototype simulation, no charge)</div>
+            <h3>Welcome to DeskMate AI.</h3>
+            <p class="confirm-lead" id="confirmLeadText">Your 14-day free trial for the Pro plan has been activated with HK$0 charged today.</p>
+
+            <div class="confirm-ledger">
+              <div class="cl-row"><span>Reference ID</span><strong id="confRef">DM-2026-HK842</strong></div>
+              <div class="cl-row"><span>Shop / owner</span><strong id="confSalon">Lumière Nail Studio</strong></div>
+              <div class="cl-row"><span>Selected plan</span><strong id="confPlan">Pro Plan</strong></div>
+              <div class="cl-row"><span>Due today</span><strong class="bronze-text">HK$0</strong></div>
+              <div class="cl-row"><span>After 14-day trial</span><strong id="confAfter">HK$788 / month</strong></div>
+              <div class="cl-row"><span>Payment method</span><strong id="confMethod">Visa / Mastercard</strong></div>
+            </div>
+
+            <p class="confirm-next">Next step: our Hong Kong onboarding specialist will WhatsApp you within 24 hours to import your treatment menu, pricing and opening hours.</p>
+            <button type="button" class="btn btn-outline" id="resetCheckoutBtn">Try another plan</button>
+          </div>
+
+          <!-- Right: Live Order Summary Sheet -->
+          <aside class="checkout-summary">
+            <h3 class="summary-title">Order summary</h3>
+            <div class="sum-plan-name" id="sumPlanName">Pro Plan</div>
+            <p class="sum-plan-desc" id="sumPlanDesc">WhatsApp + Instagram DM + Website chat, up to 1,000 bilingual chats/mo, one shared calendar and reminders.</p>
+
+            <div class="sum-rows">
+              <div class="sum-row">
+                <span>14-day free trial and setup</span>
+                <span>Included</span>
+              </div>
+              <div class="sum-row">
+                <span>Billing cycle</span>
+                <span id="sumCycle">Monthly</span>
+              </div>
+              <div class="sum-row">
+                <span>Post-trial fee</span>
+                <span id="sumAfter">HK$788 / mo</span>
+              </div>
+              <div class="sum-row sum-total">
+                <span>Due today</span>
+                <strong class="bronze-text">HK$0</strong>
+              </div>
+            </div>
+
+            <p class="sum-note">Billing starts automatically only after Day 14 unless cancelled. Protected under Hong Kong PDPO principles.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. FAQ -->
+    <section class="section section-tinted" id="faq">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2>Frequently asked questions.</h2>
+          <p class="section-sub">Clear answers for Hong Kong salon owners comparing DeskMate AI with general messaging tools.</p>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item" open>
+            <summary>Meta Business Agent already answers WhatsApp. Why pay for DeskMate AI?</summary>
+            <p>General tools leave setup to the salon owner and usually cover one channel. We set up your Hong Kong treatment menu, prices and hours for you, and DeskMate AI keeps WhatsApp, Instagram DM and website chat on one calendar.</p>
+          </details>
+          <details class="faq-item">
+            <summary>How does the 14-day free trial work?</summary>
+            <p>You pay HK$0 today. We configure your salon's services and opening hours so you can test the full booking workflow with real enquiries for 14 days. If you decide not to continue before Day 14, cancel with zero charge.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What happens when a customer asks a complex or personal question?</summary>
+            <p>DeskMate AI handles routine pricing, availability, booking and rescheduling automatically. Whenever a customer mentions allergies, custom bridal packages or requests a human, it flags and summarises the conversation directly to the owner's WhatsApp.</p>
+          </details>
+          <details class="faq-item">
+            <summary>How do you protect salon and customer booking data in Hong Kong?</summary>
+            <p>We follow Hong Kong Personal Data (Privacy) Ordinance (PDPO) data minimisation principles. We store only the booking details needed to confirm appointments and send reminders, on encrypted managed cloud infrastructure.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. CONTACT / BOOK A 1-TO-1 DEMO -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-info">
+            <h2>Book a 1-to-1 personal demo.</h2>
+            <p class="section-sub">See DeskMate AI configured with your own salon's treatment list and opening hours. Available online or via in-person visits across Mong Kok, Causeway Bay and Tsim Sha Tsui.</p>
+
+            <div class="contact-meta">
+              <div class="cm-row">
+                <span class="cm-k">Hong Kong onboarding</span>
+                <span class="cm-v">Mong Kok, Causeway Bay and Tsim Sha Tsui</span>
+              </div>
+              <div class="cm-row">
+                <span class="cm-k">Languages</span>
+                <span class="cm-v">Cantonese (廣東話) and English</span>
+              </div>
+              <div class="cm-row">
+                <span class="cm-k">Response window</span>
+                <span class="cm-v">Within 1 business day</span>
+              </div>
+              <div class="cm-row" id="about">
+                <span class="cm-k">About DeskMate AI</span>
+                <span class="cm-v">Hong Kong e-business venture founded as a PolyU HKCC SEHS2265 venture to give independent salons a 24/7 bilingual front desk.</span>
+              </div>
+            </div>
+
+            <div class="updates-strip" aria-label="Latest platform updates">
+              <div class="upd-heading">Latest Platform Updates</div>
+              <div class="upd-row">
+                <strong class="upd-date">Nov 2026</strong>
+                <span>Instagram DM now syncs to the shared calendar; the HK$0 14-day trial checkout prototype is live.</span>
+              </div>
+              <div class="upd-row">
+                <strong class="upd-date">Oct 2026</strong>
+                <span>Cantonese and English menu templates for nail, facial and lash treatments released for Hong Kong salons.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-wrap">
+            <form id="demoForm" novalidate>
+              <div class="form-grid-2">
+                <div class="field">
+                  <label for="fName">Your name</label>
+                  <input type="text" id="fName" name="name" placeholder="e.g. Chloe Chan" required>
+                </div>
+                <div class="field">
+                  <label for="fSalon">Shop or salon name</label>
+                  <input type="text" id="fSalon" name="salon" placeholder="e.g. Atelier Glow HK" required>
+                </div>
+              </div>
+
+              <div class="form-grid-2">
+                <div class="field">
+                  <label for="fPhone">WhatsApp number</label>
+                  <input type="tel" id="fPhone" name="phone" placeholder="+852 9XXX XXXX" required>
+                </div>
+                <div class="field">
+                  <label for="fDistrict">District</label>
+                  <select id="fDistrict" name="district">
+                    <option value="Causeway Bay">Causeway Bay</option>
+                    <option value="Mong Kok">Mong Kok</option>
+                    <option value="Tsim Sha Tsui">Tsim Sha Tsui</option>
+                    <option value="Central / Sheung Wan">Central / Sheung Wan</option>
+                    <option value="Other Hong Kong District">Other Hong Kong district</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="fMessage">Main booking channels and notes</label>
+                <textarea id="fMessage" name="message" rows="3" placeholder="Tell us your main enquiry channels (WhatsApp, Instagram, website) and team size..."></textarea>
+              </div>
+
+              <label class="optin-row" for="fOptIn">
+                <input type="checkbox" id="fOptIn" name="optin">
+                <span>Send me optional monthly Hong Kong salon booking tips and performance updates (permission-based; unsubscribe anytime).</span>
+              </label>
+
+              <div class="form-error" id="formError" hidden>Please fill in your name, shop or salon name and WhatsApp number.</div>
+
+              <button type="submit" class="btn btn-solid btn-full">Request personal 1-to-1 demo</button>
+              <p class="pdpo-note">Prototype simulation: no data is transmitted. In the live service, we use your details only to arrange your walkthrough and, if you tick the box above, to send updates under Hong Kong's PDPO. You can opt out at any time.</p>
+            </form>
+
+            <div class="form-success" id="formSuccess" hidden>
+              <h3>Demo request received.</h3>
+              <p id="formSuccessText">Thank you. Our Hong Kong team will reach out via WhatsApp within 1 business day to arrange your 15-minute walkthrough.</p>
+              <button type="button" class="btn btn-outline" id="resetDemoFormBtn">Submit another request</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <div class="brand">DESKMATE AI</div>
+        <p class="footer-note">24/7 bilingual AI receptionist for independent Hong Kong beauty and hair salons.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#how-it-works">How it works</a>
+        <a href="#industries">Industries</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#checkout">14-day trial</a>
+        <a href="#faq">FAQ</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-legal">
+        <span>SEHS2265 E-Business prototype (Wix Headless + Wix Media CDN) · Individual Portfolio Author</span>
+        <span>Booking chat, checkout and demo form are front-end prototype simulations (no real billing or external storage).</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
